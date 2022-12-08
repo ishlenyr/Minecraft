@@ -1,0 +1,112 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: rgb(57, 143, 143);
+  perspective: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+:root {
+  --translate-x: 400px;
+  --rotate-y: 10deg;
+  --rotate-x: 0deg;
+  --translate-z: 800px;
+}
+
+.camera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0px;
+  width: 0px;
+  transform: translateZ(var(--translate-x)) 
+             translateX(var(--translate-z))
+             rotateY(var(--rotate-y)) 
+             rotateX(var(--rotate-x));
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  transform: translateZ(-99px);
+  transform-style: preserve-3d;
+}
+
+.room {
+  height: 512px;
+  width: 512px;
+  transform-style: preserve-3d;
+}
+
+.floor {
+  height: 704px;
+  width: 832px;
+  transform: translateY(256px) rotateX(90deg);
+  background-image: url(./assets/birch_planks.png);
+  background-position: center;
+}
+
+.wall {
+  height: 192px;
+  width: 128px;
+  transform: translateY(192px) translateZ(-0px) translateX(-384px) rotateY(0deg);
+  background-image: url(./assets/oak_planks.png);
+  background-position: center;
+  image-rendering: pixelated;
+}
+
+.face {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 8px;
+  color: white;
+
+  width: 64px;
+  height: 64px;
+}
+
+.cube {
+  transform-style: preserve-3d;
+  transform-origin: center;
+}
+
+.top {
+  background-image: url("assets/oak_planks.png");
+  transform: rotateX(90deg) translateZ(32px);
+}
+
+.bottom {
+  background-image: url("assets/oak_planks.png");
+  transform: rotateX(-90deg) translateZ(32px);
+}
+
+.left {
+  background-image: url("assets/oak_planks.png");
+  transform: rotateY(-90deg) translateZ(32px);
+}
+
+.right {
+  background-image: url("assets/oak_planks.png");
+  transform: rotateY(90deg) translateZ(32px);
+}
+
+.back {
+  background-image: url("assets/oak_planks.png");
+  transform: rotateY(180deg) translateZ(32px);
+}
+
+.front {
+  background-image: url("assets/oak_planks.png");
+  transform: translateZ(32px);
+}
