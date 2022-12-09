@@ -1,6 +1,6 @@
 const root = document.querySelector(":root");
 
-let varX = 300;
+let varX = 440;
 let varY = 10;
 let varZ = 660;
 let rotateX = 0;

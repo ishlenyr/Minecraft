@@ -12,14 +12,10 @@ body {
 }
 
 :root {
-  --translate-x: 300px;
+  --translate-x: 440px;
   --rotate-y: 10deg;
   --rotate-x: 0deg;
   --translate-z: 660px;
-}
-
-* {
-  image-rendering: pixelated;
 }
 
 .camera {
@@ -38,7 +34,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
   transform: translateZ(-100px) translateY(-90px) rotateY(-10deg);
   transform-style: preserve-3d;
 }
@@ -55,6 +50,16 @@ body {
   transform: translateY(256px) rotateX(90deg) translateY(-32px);
   background-image: url(./assets/birch_planks.png);
   background-position: center;
+}
+
+.ceiling {
+  height: 768px;
+  width: 832px;
+  transform: translateY(254px) translateX(-609px) rotateX(90deg)
+    translateY(-32px) translateZ(253px);
+  background-image: url(./assets/birch_planks.png);
+  background-position: center;
+  position: absolute;
 }
 
 .wall {
@@ -174,7 +179,6 @@ body {
   background-repeat: no-repeat;
   background-position: bottom, top;
   image-rendering: pixelated;
-  /* position: absolute; */
   transform: translateY(128px) translateZ(-416px) translateX(-640px);
   transform-origin: left;
 }
