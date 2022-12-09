@@ -110,6 +110,13 @@ body {
   transform-origin: center;
 }
 
+.cube > div {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  image-rendering: pixelated;
+}
+
 .top {
   background-image: url("assets/oak_planks.png");
   transform: rotateX(90deg) translateZ(32px);
@@ -138,6 +145,29 @@ body {
 .front {
   background-image: url("assets/oak_planks.png");
   transform: translateZ(32px);
+}
+
+.chest {
+  position: absolute;
+}
+
+.chest .top {
+  background-image: url(assets/chest_top.png);
+}
+
+.chest .front {
+  background-image: url(assets/chest_front.png);
+}
+
+.chest1 {
+  transform: translateY(190px) translateX(-833px) translateZ(-313px);
+}
+
+.chest .bottom,
+.chest .left,
+.chest .right,
+.chest .back {
+  background-image: url(assets/chest_side.png);
 }
 
 .wall-col {
@@ -181,4 +211,57 @@ body {
   image-rendering: pixelated;
   transform: translateY(128px) translateZ(-416px) translateX(-640px);
   transform-origin: left;
+}
+
+.trapdoor {
+  width: 96px;
+  height: 96px;
+  background-image: url(assets/spruce_trapdoor.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+}
+
+.trapdoor1 {
+  position: absolute;
+  transform: rotateX(-90deg) translateZ(256px) translateX(-368px)
+    translateY(306px);
+}
+
+.torch {
+  position: absolute;
+}
+
+.torch .left,
+.torch .right,
+.torch .front,
+.torch .back {
+  background-image: url(assets/torch.png);
+  transform: translateZ(6px);
+}
+
+.torch .face {
+  height: 32px;
+  width: 16px;
+}
+
+.torch > div {
+  background-size: 200%;
+}
+
+.torch .left {
+  transform: rotateY(-90deg) translateZ(2px);
+}
+
+.torch .right {
+  transform: rotateY(90deg) translateZ(2px);
+}
+
+.torch .back {
+  transform: rotateY(180deg) translateZ(2px);
+}
+
+.torch .front {
+  transform: translateZ(2px);
 }
