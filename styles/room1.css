@@ -1,131 +1,140 @@
 :root {
-    --translate-x: -512px;
-    --translate-y: -512px;
-    --translate-z: 1116px;
-    --rotate-y: 250deg;
-    --rotate-x: 0deg;
+  --translate-x: -512px;
+  --translate-y: -512px;
+  --translate-z: 1116px;
+  --rotate-y: 250deg;
+  --rotate-x: 0deg;
+  --block-size: 64px;
 }
 
 .floor {
-    height: 768px;
-    width: 832px;
-    transform: translateY(256px) rotateX(90deg) translateY(-32px);
-    background-image: url("../assets/birch_planks.png");
-    background-position: center;
+  height: calc(var(--block-size) * 12);
+  width: calc(var(--block-size) * 13);
+  transform: translateY(256px) rotateX(90deg) translateY(-32px);
+  background-image: url("../assets/birch_planks.png");
+  background-position: center;
 }
 
 .wall {
-    height: 257px;
-    width: 704px;
-    background-image: url("../assets/oak_planks.png");
-    background-position: center;
-    image-rendering: pixelated;
+  height: calc(var(--block-size) * 3);
+  width: calc(var(--block-size) * 12);
+  background-image: url("../assets/oak_planks.png");
+  background-position: center;
+  image-rendering: pixelated;
 }
 
 .wall1 {
-    transform: translateY(128px) translateZ(0px) translateX(-353px) rotateY(90deg);
+  transform: translateY(-320px) translateZ(-416px) translateX(var(--block-size));
 }
 
 .wall2 {
-    position: absolute;
-    transform: translateY(128px) translateZ(0px) translateX(-1023px) rotateY(90deg);
+  position: absolute;
+  transform: translateY(-512px) translateZ(352px) translateX(var(--block-size));
 }
 
 .wall3 {
-    position: absolute;
-    width: 323px;
-    transform: translateY(128px) translateZ(-352px) translateX(-353px);
+  position: absolute;
+  width: calc(var(--block-size) * 5);
+  transform: translateY(-512px) translateZ(-286px) translateX(-96px)
+    rotateY(90deg);
 }
 
 .wall4 {
-    position: absolute;
-    width: 256px;
-    transform: translateY(128px) translateZ(-352px) translateX(-896px);
+  position: absolute;
+  width: calc(var(--block-size) * 5);
+  transform: translateY(-512px) translateZ(206px) translateX(-96px)
+    rotateY(90deg);
 }
 
 .face {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    width: 64px;
-    height: 64px;
+  width: 64px;
+  height: 64px;
 }
 
 .cube {
-    transform-style: preserve-3d;
-    transform-origin: center;
+  transform-style: preserve-3d;
+  transform-origin: center;
 }
 
 .top {
-    background-image: url("../assets/oak_planks.png");
-    transform: rotateX(90deg) translateZ(32px);
+  background-image: url("../assets/oak_planks.png");
+  transform: rotateX(90deg) translateZ(32px);
 }
 
 .bottom {
-    background-image: url("../assets/oak_planks.png");
-    transform: rotateX(-90deg) translateZ(32px);
+  background-image: url("../assets/oak_planks.png");
+  transform: rotateX(-90deg) translateZ(32px);
 }
 
 .left {
-    background-image: url("../assets/oak_planks.png");
-    transform: rotateY(-90deg) translateZ(32px);
+  background-image: url("../assets/oak_planks.png");
+  transform: rotateY(-90deg) translateZ(32px);
 }
 
 .right {
-    background-image: url("../assets/oak_planks.png");
-    transform: rotateY(90deg) translateZ(32px);
+  background-image: url("../assets/oak_planks.png");
+  transform: rotateY(90deg) translateZ(32px);
 }
 
 .back {
-    background-image: url("../assets/oak_planks.png");
-    transform: rotateY(180deg) translateZ(32px);
+  background-image: url("../assets/oak_planks.png");
+  transform: rotateY(180deg) translateZ(32px);
 }
 
 .front {
-    background-image: url("../assets/oak_planks.png");
-    transform: translateZ(32px);
+  background-image: url("../assets/oak_planks.png");
+  transform: translateZ(32px);
 }
 
 .wall-col {
-    transform-style: preserve-3d;
-    --transform-y-offset: 64px;
+  transform-style: preserve-3d;
 }
 
-.wall-col> :nth-child(2) {
-    transform: translateY(var(--transform-y-offset));
+.wall-col > :nth-child(1) {
+  transform: translateY(var(--block-size));
 }
 
-.wall-col> :nth-child(3) {
-    transform: translateY(calc(var(--transform-y-offset) * 2));
+.wall-col > :nth-child(2) {
+  transform: translateY(calc(var(--block-size) * 2));
 }
 
-.wall-col> :nth-child(4) {
-    transform: translateY(calc(var(--transform-y-offset) * 3));
+.wall-col > :nth-child(3) {
+  transform: translateY(calc(var(--block-size) * 3));
 }
 
 .wall-col1 {
-    position: absolute;
-    transform: translateY(0px) translateZ(-352px) translateX(-736px) rotateY(90deg);
+  position: absolute;
+  transform: translateY(384px) translateZ(-81px) translateX(32px) rotateY(90deg);
 }
 
 .wall-col2 {
-    position: absolute;
-    transform: translateY(0px) translateZ(-352px) translateX(-545px) rotateY(90deg);
+  position: absolute;
+  transform: translateY(384px) translateZ(47px) translateX(32px) rotateY(90deg);
+}
+
+.wall-col3 {
+  position: absolute;
+  transform: translateY(384px) translateZ(-17px) translateX(32px) rotateY(90deg);
 }
 
 .door {
-    width: 64px;
-    height: 128px;
-    position: absolute;
-    background-image: url("../assets/spruce_door_bottom.png"),
-        url("../assets/spruce_door_top.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom, top;
-    image-rendering: pixelated;
-    /* position: absolute; */
-    transform: translateY(128px) translateZ(-416px) translateX(-640px);
-    transform-origin: left;
+  width: var(--block-size);
+  height: calc(var(--block-size) * 2);
+  position: absolute;
+  background-image: url("../assets/spruce_door_bottom.png"),
+    url("../assets/spruce_door_top.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom, top;
+  image-rendering: pixelated;
+  transform-origin: left;
+}
+
+.door1 {
+  transform: translateY(512px) translateZ(-17px) translateX(0px) rotateY(90deg);
 }
