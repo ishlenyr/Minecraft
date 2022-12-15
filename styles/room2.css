@@ -1,0 +1,116 @@
+:root {
+    --translate-x: 0px;
+    --translate-y: 64px;
+    --translate-z: 800px;
+    --rotate-y: 170deg;
+    --rotate-x: 0deg;
+}
+
+.room1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: translate3d(200px);
+}
+
+.room1>div {
+    position: absolute;
+}
+
+.stone {
+    background-image: url("../assets/stone.png");
+    image-rendering: pixelated;
+}
+
+.copper {
+    background-image: url("../assets/copper_ore.png");
+    image-rendering: pixelated;
+}
+
+.floor-mainpart {
+    height: calc(var(--block-size) * 9);
+    width: calc(var(--block-size) * 5);
+    transform: rotateX(90deg) translate3d(0, 0, calc(var(--block-size) * 4));
+}
+
+.floor-part2 {
+    height: calc(var(--block-size) * 1);
+    width: calc(var(--block-size) * 1);
+    transform: rotateX(90deg) translate3d(calc(var(--block-size) * 0), calc(var(--block-size) * 2.5), 0);
+}
+
+.wall1 {
+    height: calc(var(--block-size) * 3);
+    width: calc(var(--block-size) * 3);
+    transform: translate3d(calc(var(--block-size) * 0), calc(var(--block-size) * -2.5), calc(var(--block-size) * 3));
+}
+
+.wall2 {
+    height: calc(var(--block-size) * 2);
+    width: calc(var(--block-size) * 2);
+    transform: translate3d(calc(var(--block-size) * 0), calc(var(--block-size) * -1.5), calc(var(--block-size) * 3));
+}
+
+.wall3 {
+    height: calc(var(--block-size) * 4);
+    width: calc(var(--block-size) * 2);
+    transform: rotateY(90deg) translate3d(calc(var(--block-size) * -3), calc(var(--block-size) * -3.5), calc(var(--block-size) * 2));
+}
+
+.wall4 {
+    height: calc(var(--block-size) * 4);
+    width: calc(var(--block-size) * 2);
+    transform: translate3d(calc(var(--block-size) * 2.99), calc(var(--block-size) * -3.5), calc(var(--block-size) * 2));
+}
+
+.wall5 {
+    height: calc(var(--block-size) * 4);
+    width: calc(var(--block-size) * 2);
+    transform: rotateY(90deg) translate3d(calc(var(--block-size) * -2), calc(var(--block-size) * -3.5), calc(var(--block-size) * 3));
+}
+
+.wall6 {
+    height: calc(var(--block-size) * 4);
+    width: calc(var(--block-size) * 2);
+    transform: translate3d(calc(var(--block-size) * 3.99), calc(var(--block-size) * -3.5), calc(var(--block-size) * 1));
+}
+
+.wall7 {
+    height: calc(var(--block-size) * 4);
+    width: calc(var(--block-size) * 4);
+    transform: rotateY(90deg) translate3d(calc(var(--block-size) * -2), calc(var(--block-size) * -2.5), calc(var(--block-size) * -2));
+}
+
+.wall8 {
+    height: calc(var(--block-size) * 4);
+    width: calc(var(--block-size) * 4);
+    transform: rotateY(90deg) translate3d(calc(var(--block-size) * 3), calc(var(--block-size) * -2.5), calc(var(--block-size) * -2));
+}
+
+.wall9 {
+    height: calc(var(--block-size) * 1);
+    width: calc(var(--block-size) * 4);
+    transform: rotateY(90deg) translate3d(calc(var(--block-size) * 1), calc(var(--block-size) * -2.5), calc(var(--block-size) * -2));
+}
+
+.door {
+    width: var(--block-size);
+    height: calc(var(--block-size) * 2);
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom, top;
+    image-rendering: pixelated;
+    transform-origin: left;
+}
+
+.wooden-door {
+    background-image: url("../assets/oak_door_bottom.png"),
+        url("../assets/oak_door_top.png");
+}
+
+.door1 {
+    transform: rotateY(90deg) translate3d(calc(var(--block-size) * -0), calc(var(--block-size) * -1.5), calc(var(--block-size) * 0));
+}

@@ -1,3 +1,7 @@
+:root {
+    --block-size: 64px;
+}
+
 html,
 body {
     height: 100%;
