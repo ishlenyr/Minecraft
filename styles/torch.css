@@ -1,0 +1,47 @@
+.torch {
+    width: 8px;
+    height: 40px;
+    transform-style: preserve-3d;
+
+}
+
+.soul-torch > div {
+    background-image: url("../assets/soul_torch.png");
+}
+
+.torch > div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8px;
+    
+    background-position: -28px -24px;
+    transform-style: preserve-3d;
+    image-rendering: pixelated;
+}
+
+.torch-top {
+    height: 8px;
+    transform: rotateX(90deg) translateZ(4px)
+}
+
+.torch-left {
+    height: 40px;
+    transform: rotateY(-90deg) translateZ(4px)
+}
+
+.torch-right {
+    height: 40px;
+    transform: rotateY(90deg) translateZ(4px)
+}
+
+.torch-back {
+    height: 40px;
+    transform: rotateY(180deg) translateZ(4px)
+}
+
+.torch-front {
+    height: 40px;
+    transform: translateZ(4px)
+}
