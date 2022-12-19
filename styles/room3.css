@@ -1,0 +1,155 @@
+:root {
+  --translate-x: -512px;
+  --translate-y: -512px;
+  --translate-z: 916px;
+  --rotate-y: 250deg;
+  --rotate-x: 0deg;
+  --block-size: 64px;
+}
+
+.floor {
+  height: calc(var(--block-size) * 12);
+  width: calc(var(--block-size) * 13);
+  transform: translateY(256px) rotateX(90deg) translateY(-17px);
+  background-image: url("../assets/dark_oak_log_top.png");
+  background-position: center;
+}
+
+.roof {
+  height: calc(var(--block-size) * 12);
+  width: calc(var(--block-size) * 13);
+  transform: translateY(-895px) rotateX(90deg) translateY(-18px);
+  background-image: url("../assets/mangrove_log_top.png");
+  background-position: center;
+}
+
+.wall {
+  height: calc(var(--block-size) * 3);
+  width: calc(var(--block-size) * 12);
+  background-image: url("../assets/dark_oak_log.png");
+  background-position: center;
+  image-rendering: pixelated;
+}
+
+.wall1 {
+  transform: translateY(-320px) translateZ(-400px) translateX(calc(var(--block-size) - 32px));
+}
+
+.wall2 {
+  position: absolute;
+  transform: translateY(-512px) translateZ(366px) translateX(var(--block-size));
+}
+
+.wall3 {
+  position: absolute;
+  width: calc(var(--block-size) * 4);
+  transform: translateY(-512px) translateZ(-272px) translateX(-96px)
+    rotateY(90deg);
+}
+
+.wall4 {
+  position: absolute;
+  width: calc(var(--block-size) * 5);
+  transform: translateY(-512px) translateZ(206px) translateX(-96px)
+    rotateY(90deg);
+}
+
+.wall5 {
+  position: absolute;
+  width: calc(var(--block-size) * 13);
+  transform: translateY(-512px) translateZ(-14px) translateX(384px)
+    rotateY(90deg);
+}
+
+.face {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 64px;
+  height: 64px;
+}
+
+.cube {
+  transform-style: preserve-3d;
+  transform-origin: center;
+}
+
+.top {
+  background-image: url("../assets/dark_oak_log_top.png");
+  transform: rotateX(90deg) translateZ(32px);
+}
+
+.bottom {
+  background-image: url("../assets/dark_oak_log_top.png");
+  transform: rotateX(-90deg) translateZ(32px);
+}
+
+.left {
+  background-image: url("../assets/dark_oak_log_top.png");
+  transform: rotateY(-90deg) translateZ(32px);
+}
+
+.right {
+  background-image: url("../assets/dark_oak_log_top.png");
+  transform: rotateY(90deg) translateZ(32px);
+}
+
+.back {
+  background-image: url("../assets/dark_oak_log_top.png");
+  transform: rotateY(180deg) translateZ(32px);
+}
+
+.front {
+  background-image: url("../assets/dark_oak_log_top.png");
+  transform: translateZ(32px);
+}
+
+.wall-col {
+  transform-style: preserve-3d;
+}
+
+.wall-col > :nth-child(1) {
+  transform: translateY(var(--block-size));
+}
+
+.wall-col > :nth-child(2) {
+  transform: translateY(calc(var(--block-size) * 2));
+}
+
+.wall-col > :nth-child(3) {
+  transform: translateY(calc(var(--block-size) * 3));
+}
+
+.wall-col1 {
+  position: absolute;
+  transform: translateY(384px) translateZ(-81px) translateX(32px) rotateY(90deg);
+}
+
+.wall-col2 {
+  position: absolute;
+  transform: translateY(384px) translateZ(47px) translateX(32px) rotateY(90deg);
+}
+
+.wall-col3 {
+  position: absolute;
+  transform: translateY(384px) translateZ(-17px) translateX(32px) rotateY(90deg);
+}
+
+.door {
+  width: var(--block-size);
+  height: calc(var(--block-size) * 2);
+  position: absolute;
+  background-image: url("../assets/spruce_door_bottom.png"),
+    url("../assets/spruce_door_top.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom, top;
+  image-rendering: pixelated;
+  transform-origin: left;
+}
+
+.door1 {
+  transform: translateY(512px) translateZ(-17px) translateX(0px) rotateY(90deg);
+}
