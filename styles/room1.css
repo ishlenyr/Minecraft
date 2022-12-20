@@ -15,6 +15,15 @@
   background-position: center;
 }
 
+.ceiling {
+  position: absolute;
+  height: calc(var(--block-size) * 12);
+  width: calc(var(--block-size) * 13);
+  transform: translateY(-704px) rotateX(90deg) translateY(-32px);
+  background-image: url("../assets/birch_planks.png");
+  background-position: center;
+}
+
 .wall {
   height: calc(var(--block-size) * 3);
   width: calc(var(--block-size) * 12);
@@ -59,36 +68,45 @@
 .cube {
   transform-style: preserve-3d;
   transform-origin: center;
+  --cube-offset-z: 32px;
+  --cube-offset-y: 0px;
+  --cube-offset-x: 0px;
 }
 
 .top {
   background-image: url("../assets/oak_planks.png");
-  transform: rotateX(90deg) translateZ(32px);
+  transform: rotateX(90deg) translateX(var(--cube-offset-x))
+    translateY(var(--cube-offset-y)) translateZ(var(--cube-offset-z));
 }
 
 .bottom {
   background-image: url("../assets/oak_planks.png");
-  transform: rotateX(-90deg) translateZ(32px);
+  transform: rotateX(-90deg) translateX(var(--cube-offset-x))
+    translateY(var(--cube-offset-y)) translateZ(var(--cube-offset-z));
 }
 
 .left {
   background-image: url("../assets/oak_planks.png");
-  transform: rotateY(-90deg) translateZ(32px);
+  transform: rotateY(-90deg) translateX(var(--cube-offset-x))
+    translateY(var(--cube-offset-y)) translateZ(var(--cube-offset-z));
 }
 
 .right {
   background-image: url("../assets/oak_planks.png");
-  transform: rotateY(90deg) translateZ(32px);
+  transform: rotateY(90deg) translateX(var(--cube-offset-x))
+    translateY(var(--cube-offset-y)) translateZ(var(--cube-offset-z));
 }
 
 .back {
   background-image: url("../assets/oak_planks.png");
-  transform: rotateY(180deg) translateZ(32px);
+  transform: rotateY(180deg) translateX(var(--cube-offset-x))
+    translateY(var(--cube-offset-y)) translateZ(var(--cube-offset-z));
 }
 
 .front {
   background-image: url("../assets/oak_planks.png");
-  transform: translateZ(32px);
+  transform: translateX(var(--cube-offset-x)) translateY(var(--cube-offset-y))
+    translateZ(var(--cube-offset-z));
 }
 
 .wall-col {
@@ -136,5 +154,105 @@
 }
 
 .door1 {
-  transform: translateY(512px) translateZ(-17px) translateX(0px) rotateY(90deg);
+  transform: translateY(512px) translateZ(-81px) translateX(var(--block-size))
+    rotateY(270deg);
+}
+
+.chest {
+  --cube-offset-z: 28px;
+}
+
+.chest > div {
+  background-image: url(../assets/normal.png);
+  width: 56px;
+  height: 56px;
+  --chest-size: 56px;
+  --chest-cover-size: 20px;
+}
+
+.chest .front {
+  background-position: -56px -76px;
+}
+
+.chest .right {
+  background-position: -112px 0px;
+}
+
+.chest .left {
+  background-position: -112px 0px;
+}
+
+.chest .back {
+  background-position: -56px -76px;
+}
+
+.chest .top {
+  background-position: -56px -76px;
+}
+
+.chest .bottom {
+  background-position: -56px 0;
+}
+
+.chest-cover.chest-cover {
+  width: var(--chest-size);
+  height: var(--chest-cover-size);
+}
+
+.chest-cover.front,
+.chest-cover.back,
+.chest-cover.left,
+.chest-cover.right {
+  background-position: -56px -56px;
+}
+
+.chest-lock.chest-lock {
+  width: 8px;
+  height: 16px;
+  background-position: 0px 0px;
+  --cube-offset-x: 22px;
+  --cube-offset-y: 10px;
+}
+
+.chest1 {
+  transform: translateY(584px) translateX(94px) translateZ(-144px)
+    rotateY(90deg);
+}
+
+.workbench {
+  transform: translateY(576px) translateX(96px) translateZ(111px) rotateY(90deg);
+}
+
+.workbench .front,
+.workbench .back {
+  background-image: url(/assets/crafting_table_front.png);
+}
+
+.workbench .left,
+.workbench .right {
+  background-image: url(/assets/crafting_table_side.png);
+}
+
+.workbench .top,
+.workbench .bottom {
+  background-image: url(/assets/crafting_table_top.png);
+}
+
+.furnace {
+  transform: translateY(576px) translateX(96px) translateZ(175px) rotateY(90deg);
+}
+
+.furnace .front,
+.furnace .back {
+  background-image: url(/assets/furnace_front.png);
+}
+
+.furnace .left,
+.furnace .right {
+  background-image: url(/assets/furnace_side.png);
+}
+
+.furnace .top,
+.furnace .bottom {
+  background-image: url(/assets/furnace_top.png);
 }
