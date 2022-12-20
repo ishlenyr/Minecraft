@@ -83,6 +83,7 @@
     animation: torch-particle 2s ease-in infinite 200ms;
     transform: rotateY(90deg) translateY(-16px) translateX(2px);
 }
+
 @keyframes torch-particle {
     100% {
         height: 0;

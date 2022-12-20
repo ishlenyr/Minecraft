@@ -1,21 +1,24 @@
 :root {
-    --translate-x: -300px;
+    --translate-x: -1000px;
     --translate-y: 64px;
-    --translate-z: 1000px;
+    --translate-z: 900px;
     --rotate-y: 224deg;
-    --rotate-x: -4deg;
+    --rotate-x: -50deg;
 }
 
-.room1 {
+.room {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
     transform-style: preserve-3d;
     transform-origin: center;
-    transform: translate3d(200px);
 }
 
-.room1>div {
+.room2 {
+    transform: translateX(400px);
+}
+
+.room > div {
     position: absolute;
 }
 
@@ -29,8 +32,18 @@
     image-rendering: pixelated;
 }
 
+.nether-bricks {
+    background-image: url("../assets/nether_bricks.png");
+    image-rendering: pixelated;
+}
+
 .obsidian {
     background-image: url("../assets/obsidian.png");
+    image-rendering: pixelated;
+}
+
+.lava {
+    background-image: url("../assets/lava.gif");
     image-rendering: pixelated;
 }
 
@@ -66,6 +79,28 @@
     transform: rotateX(90deg) translate3d(calc(var(--block-size) * 5),
             calc(var(--block-size) * -1),
             calc(var(--block-size) * 1.5));
+}
+
+.floor5 {
+    height: calc(var(--block-size) * 11);
+    width: calc(var(--block-size) * 11);
+    transform: rotateX(90deg);
+    clip-path: polygon(0% 0%, 0% 100%, 
+            192px 100%,
+            192px 192px,
+            512px 192px,
+            512px 512px,
+            192px 512px,
+            192px 100%,
+            100% 100%, 100% 0%);
+}
+
+.floor6 {
+    height: calc(var(--block-size) * 7);
+    width: calc(var(--block-size) * 7);
+    transform: rotateX(90deg) translate3d(calc(var(--block-size) * 1),
+            calc(var(--block-size) * 0),
+            calc(var(--block-size) * -2.2));
 }
 
 .door {
