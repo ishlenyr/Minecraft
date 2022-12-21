@@ -95,6 +95,23 @@
             100% 100%, 100% 0%);
 }
 
+.floor5-background {
+    --radius: 60%;
+    background: radial-gradient(circle, rgba(255, 168, 130, 0.61) 0%, rgba(255,255,255,0) var(--radius));
+    image-rendering: pixelated;
+    animation: lava-light 3.8s linear infinite;
+
+}
+
+@keyframes lava-light {
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .floor6 {
     height: calc(var(--block-size) * 7);
     width: calc(var(--block-size) * 7);
