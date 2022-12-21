@@ -210,13 +210,12 @@
   width: 8px;
   height: 16px;
   background-position: 0px 0px;
-  --cube-offset-x: 22px;
-  --cube-offset-y: 10px;
+  --cube-offset-x: 24px;
+  --cube-offset-y: 11px;
 }
 
 .chest1 {
-  transform: translateY(584px) translateX(94px) translateZ(-144px)
-    rotateY(90deg);
+  transform: translateY(584px) translateX(94px) translateZ(-84px) rotateY(90deg);
 }
 
 .workbench {
@@ -255,4 +254,62 @@
 .furnace .top,
 .furnace .bottom {
   background-image: url(/assets/furnace_top.png);
+}
+
+.bookshelf {
+  position: absolute;
+}
+
+.bookshelf .front,
+.bookshelf .back,
+.bookshelf .left,
+.bookshelf .right {
+  background-image: url(/assets/bookshelf.png);
+}
+
+.bookshelf .top,
+.bookshelf .bottom {
+  background-image: url(/assets/oak_planks.png);
+}
+
+.bookshelf1 {
+  transform: translateY(384px) translateX(64px) translateZ(-384px);
+}
+
+.bookshelf2 {
+  transform: translateY(448px) translateX(64px) translateZ(-320px);
+}
+
+.bookshelf3 {
+  transform: translateY(448px) translateX(128px) translateZ(-384px);
+}
+
+.bookshelf4 {
+  transform: translateY(512px) translateX(64px) translateZ(-256px);
+}
+
+.bookshelf5 {
+  transform: translateY(512px) translateX(192px) translateZ(-384px);
+}
+
+.enchanting-table {
+  position: absolute;
+  transform: translateY(576px) translateX(192px) translateZ(-256px);
+  --cube-offset-z: 31px;
+}
+
+.enchanting-table .front,
+.enchanting-table .back,
+.enchanting-table .right,
+.enchanting-table .left {
+  background-image: url(/assets/enchanting_table_side.png);
+}
+
+.enchanting-table .bottom {
+  background-image: url(/assets/enchanting_table_bottom.png);
+}
+
+.enchanting-table .top {
+  background-image: url(/assets/enchanting_table_top.png);
+  --cube-offset-z: 16px;
 }
