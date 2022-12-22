@@ -1,148 +1,59 @@
 :root {
-    --translate-x: -1000px;
-    --translate-y: 64px;
-    --translate-z: 900px;
-    --rotate-y: 224deg;
-    --rotate-x: -50deg;
+  --translate-x: 1060px;
+  --translate-y: 484px;
+  --translate-z: 600px;
+  --rotate-y: -68deg;
+  --rotate-x: 336deg;
 }
 
 .room {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    transform-origin: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform-origin: center;
 }
 
 .room2 {
-    transform: translateX(400px);
+  transform: translate3d(calc(var(--block-size) * -14),
+      calc(var(--block-size) * -5),
+      calc(var(--block-size) * -0.5));
 }
 
-.room > div {
-    position: absolute;
+.room3 {
+  transform: translate3d(calc(var(--block-size) * -24),
+      calc(var(--block-size) * -2),
+      calc(var(--block-size) * -0.5));
 }
 
-.nether {
-    background-image: url("../assets/nether.png");
-    image-rendering: pixelated;
+.room4 {
+  transform: translate3d(calc(var(--block-size) * -27),
+      calc(var(--block-size) * -11),
+      calc(var(--block-size) * -6.5));
 }
 
-.nether-gold {
-    background-image: url("../assets/nether_gold_ore.png");
-    image-rendering: pixelated;
+.room>div {
+  position: absolute;
 }
 
-.nether-bricks {
-    background-image: url("../assets/nether_bricks.png");
-    image-rendering: pixelated;
-}
-
-.obsidian {
-    background-image: url("../assets/obsidian.png");
-    image-rendering: pixelated;
-}
-
-.lava {
-    background-image: url("../assets/lava.gif");
-    image-rendering: pixelated;
-}
-
-.portal {
-    background-image: url("../assets/portal.gif");
-    image-rendering: pixelated;
-}
-
-.floor-mainpart {
-    height: calc(var(--block-size) * 9);
-    width: calc(var(--block-size) * 7);
-    transform: rotateX(90deg) translate3d(0, 0, calc(var(--block-size) * 4));
-}
-
-.floor2 {
-    height: calc(var(--block-size) * 1);
-    width: calc(var(--block-size) * 1);
-    transform: rotateX(90deg) translate3d(calc(var(--block-size) * 0),
-            calc(var(--block-size) * 2.5), 0);
-}
-
-.floor3 {
-    height: calc(var(--block-size) * 4);
-    width: calc(var(--block-size) * 1);
-    transform: rotateX(90deg) translate3d(calc(var(--block-size) * 5),
-            calc(var(--block-size) * -1),
-            calc(var(--block-size) * 4.5));
-}
-
-.floor4 {
-    height: calc(var(--block-size) * 4);
-    width: calc(var(--block-size) * 1);
-    transform: rotateX(90deg) translate3d(calc(var(--block-size) * 5),
-            calc(var(--block-size) * -1),
-            calc(var(--block-size) * 1.5));
-}
-
-.floor5 {
-    height: calc(var(--block-size) * 11);
-    width: calc(var(--block-size) * 11);
-    transform: rotateX(90deg);
-    clip-path: polygon(0% 0%, 0% 100%, 
-            192px 100%,
-            192px 192px,
-            512px 192px,
-            512px 512px,
-            192px 512px,
-            192px 100%,
-            100% 100%, 100% 0%);
-}
-
-.floor5-background {
-    --radius: 60%;
-    background: radial-gradient(circle, rgba(255, 168, 130, 0.61) 0%, rgba(255,255,255,0) var(--radius));
-    image-rendering: pixelated;
-    animation: lava-light 3.8s linear infinite;
-
-}
-
-@keyframes lava-light {
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.floor6 {
-    height: calc(var(--block-size) * 7);
-    width: calc(var(--block-size) * 7);
-    transform: rotateX(90deg) translate3d(calc(var(--block-size) * 1),
-            calc(var(--block-size) * 0),
-            calc(var(--block-size) * -2.2));
-}
 
 .door {
-    width: var(--block-size);
-    height: calc(var(--block-size) * 2);
-    position: absolute;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom, top;
-    image-rendering: pixelated;
-    transform-origin: left;
-}
-
-.wooden-door {
-    background-image: url("../assets/oak_door_bottom.png"),
-        url("../assets/oak_door_top.png");
+  width: var(--block-size);
+  height: calc(var(--block-size) * 2);
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom, top;
+  image-rendering: pixelated;
+  transform-origin: left;
 }
 
 .door1 {
-    transform: rotateY(90deg) translate3d(calc(var(--block-size) * -0), calc(var(--block-size) * -1.5), calc(var(--block-size) * 0));
+  transform: rotateY(90deg) translate3d(calc(var(--block-size) * -0), calc(var(--block-size) * -1.5), calc(var(--block-size) * 0));
 }
 
 .torch1 {
-    transform: rotateY(-90deg) rotateZ(30deg) 
-            translate3d(calc(var(--block-size) * -4.5),
-            calc(var(--block-size) * 1),
-            calc(var(--block-size) * -2));
+  transform: rotateY(-90deg) rotateZ(30deg) translate3d(calc(var(--block-size) * -4.5),
+      calc(var(--block-size) * 1),
+      calc(var(--block-size) * -2));
 }
