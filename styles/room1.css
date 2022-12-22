@@ -224,17 +224,17 @@
 
 .workbench .front,
 .workbench .back {
-  background-image: url(/assets/crafting_table_front.png);
+  background-image: url(../assets/crafting_table_front.png);
 }
 
 .workbench .left,
 .workbench .right {
-  background-image: url(/assets/crafting_table_side.png);
+  background-image: url(../assets/crafting_table_side.png);
 }
 
 .workbench .top,
 .workbench .bottom {
-  background-image: url(/assets/crafting_table_top.png);
+  background-image: url(../assets/crafting_table_top.png);
 }
 
 .furnace {
@@ -243,17 +243,17 @@
 
 .furnace .front,
 .furnace .back {
-  background-image: url(/assets/furnace_front.png);
+  background-image: url(../assets/furnace_front.png);
 }
 
 .furnace .left,
 .furnace .right {
-  background-image: url(/assets/furnace_side.png);
+  background-image: url(../assets/furnace_side.png);
 }
 
 .furnace .top,
 .furnace .bottom {
-  background-image: url(/assets/furnace_top.png);
+  background-image: url(../assets/furnace_top.png);
 }
 
 .bookshelf {
@@ -264,12 +264,12 @@
 .bookshelf .back,
 .bookshelf .left,
 .bookshelf .right {
-  background-image: url(/assets/bookshelf.png);
+  background-image: url(../assets/bookshelf.png);
 }
 
 .bookshelf .top,
 .bookshelf .bottom {
-  background-image: url(/assets/oak_planks.png);
+  background-image: url(../assets/oak_planks.png);
 }
 
 .bookshelf1 {
@@ -302,14 +302,14 @@
 .enchanting-table .back,
 .enchanting-table .right,
 .enchanting-table .left {
-  background-image: url(/assets/enchanting_table_side.png);
+  background-image: url(../assets/enchanting_table_side.png);
 }
 
 .enchanting-table .bottom {
-  background-image: url(/assets/enchanting_table_bottom.png);
+  background-image: url(../assets/enchanting_table_bottom.png);
 }
 
 .enchanting-table .top {
-  background-image: url(/assets/enchanting_table_top.png);
+  background-image: url(../assets/enchanting_table_top.png);
   --cube-offset-z: 16px;
 }
