@@ -7,6 +7,12 @@
   --block-size: 64px;
 }
 
+.room {
+  height: 0px;
+  width: 0px;
+  transform-style: preserve-3d;
+}
+
 .floor {
   height: calc(var(--block-size) * 12);
   width: calc(var(--block-size) * 13);
@@ -268,8 +274,13 @@
   background-image: url(../assets/furnace_top.png);
 }
 
-.dispenser {
-  transform: translateY(576px) translateX(96px) translateZ(239px) rotateY(90deg);
+.dispenser1 {
+  transform: translateY(576px) translateX(96px) translateZ(352px) rotateY(90deg);
+}
+
+.dispenser2 {
+  transform: translateY(576px) translateX(96px) translateZ(-352px)
+    rotateY(90deg);
 }
 
 .dispenser .front,
@@ -351,3 +362,120 @@
 .face {
   filter: brightness(80%);
 } */
+
+.room2 {
+  transform: translateX(calc(var(--block-size) * -13 + 1px));
+}
+
+.room2 .wall3 {
+  position: absolute;
+  width: calc(var(--block-size) * 12);
+  transform: translateY(-512px) translateZ(-32px) translateX(-319px)
+    rotateY(90deg);
+}
+
+.head {
+  --head-size: 32px;
+  --cube-offset-z: 16px;
+}
+
+.head > div {
+  width: var(--head-size);
+  height: var(--head-size);
+}
+
+.head .front {
+  background-position: -32px -32px;
+}
+
+.head .left {
+  background-position: 0 -32px;
+}
+
+.head .right {
+  background-position: -64px -32px;
+}
+
+.head .top {
+  background-position: -32px 0;
+}
+
+.head .back {
+  background-position: -64px 0;
+}
+
+.head .bottom {
+  background-position: -96px -32px;
+}
+
+.creeper > div {
+  background-image: url(../assets/creeper.png);
+}
+
+.zombie > div {
+  background-image: url(../assets/zombie.png);
+}
+
+.skeleton > div {
+  background-image: url(../assets/skeleton.png);
+}
+
+.wither-skeleton > div {
+  background-image: url(../assets/wither_skeleton.png);
+}
+
+.steve > div {
+  background-image: url(../assets/steve.png);
+}
+
+.wither-invulnerable > div {
+  background-image: url(../assets/wither_invulnerable.png);
+}
+
+.creeper {
+  transform: translateY(518px) translateX(96px) translateZ(-18px) rotateY(90deg);
+}
+
+.zombie1 {
+  transform: translateY(518px) translateX(96px) translateZ(-82px) rotateY(90deg);
+}
+
+.zombie2 {
+  transform: translateY(518px) translateX(96px) translateZ(46px) rotateY(90deg);
+}
+
+.skeleton1 {
+  transform: translateY(518px) translateX(96px) translateZ(-146px)
+    rotateY(90deg);
+}
+
+.skeleton2 {
+  transform: translateY(518px) translateX(96px) translateZ(110px) rotateY(90deg);
+}
+
+.wither-skeleton1 {
+  transform: translateY(518px) translateX(96px) translateZ(-210px)
+    rotateY(90deg);
+}
+
+.wither-skeleton2 {
+  transform: translateY(518px) translateX(96px) translateZ(174px) rotateY(90deg);
+}
+
+.steve1 {
+  transform: translateY(518px) translateX(96px) translateZ(-274px)
+    rotateY(90deg);
+}
+
+.steve2 {
+  transform: translateY(518px) translateX(96px) translateZ(238px) rotateY(90deg);
+}
+
+.wither-invulnerable1 {
+  transform: translateY(518px) translateX(96px) translateZ(-338px)
+    rotateY(90deg);
+}
+
+.wither-invulnerable2 {
+  transform: translateY(518px) translateX(96px) translateZ(302px) rotateY(90deg);
+}
