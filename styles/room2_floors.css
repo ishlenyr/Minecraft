@@ -1,8 +1,10 @@
 
 .floor-mainpart {
     height: calc(var(--block-size) * 9);
-    width: calc(var(--block-size) * 7);
-    transform: rotateX(90deg) translate3d(0, 0, calc(var(--block-size) * 4));
+    width: calc(var(--block-size) * 8);
+    transform: rotateX(90deg) translate3d(calc(var(--block-size) * -1), 
+    calc(var(--block-size) * 0.5),
+    calc(var(--block-size) * 4));
   }
   
   .floor2 {
@@ -167,3 +169,43 @@
         calc(var(--block-size) * 1),
         calc(var(--block-size) * -1.5));
   }
+
+  .floor20 {
+    height: calc(var(--block-size) * 7);
+    width: calc(var(--block-size) * 7);
+    transform: rotateX(90deg) translate3d(calc(var(--block-size) * -2),
+        calc(var(--block-size) * 0),
+        calc(var(--block-size) * 4));
+  }
+
+  .floor21 {
+    height: calc(var(--block-size) * 3);
+    width: calc(var(--block-size) * 1);
+    transform: rotateX(90deg) translate3d(calc(var(--block-size) * -1),
+        calc(var(--block-size) * 0),
+        calc(var(--block-size) * -1));
+  }
+
+  .floor22 {
+    height: calc(var(--block-size) * 9);
+    width: calc(var(--block-size) * 8);
+    transform: rotateX(90deg) translate3d(calc(var(--block-size) * -1), 0,
+     calc(var(--block-size) * 8));
+  }
+
+  .floor23 {
+    height: calc(var(--block-size) * 4);
+    width: calc(var(--block-size) * 1);
+    transform: rotateX(90deg) translate3d(calc(var(--block-size) * -1),
+        calc(var(--block-size) * 0),
+        calc(var(--block-size) * 3.5));
+  }
+
+  .floor24 {
+    height: calc(var(--block-size) * 11);
+    width: calc(var(--block-size) * 11);
+    transform: rotateX(90deg) translate3d(calc(var(--block-size) * 0),
+        calc(var(--block-size) * 0),
+        calc(var(--block-size) * 4));
+  }
+  

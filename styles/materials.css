@@ -38,3 +38,8 @@
     background-image: url("../assets/ladder.png");
     image-rendering: pixelated;
 }
+
+.iron-bars {
+    background-image: url("../assets/iron_bars.png");
+    image-rendering: pixelated;
+}
