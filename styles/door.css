@@ -1,0 +1,59 @@
+.door {
+    width: 64px;
+    height: 128px;
+    transform-style: preserve-3d;
+
+}
+
+.oak-door > .face {
+    background-image: url("../assets/oak_door_bottom.png"),
+    url("../assets/oak_door_top.png");
+    background-position: left bottom, left top;
+    background-repeat: no-repeat;
+}
+
+.door > .face {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    image-rendering: pixelated;
+    backface-visibility: hidden;
+}
+
+.door > .top {
+    height: 12px;
+    width: 64px;
+    transform: rotateX(90deg) translateZ(6px)
+}
+.door > .bottom {
+    height: 12px;
+    width: 64px;
+    transform: rotateX(90deg) translateZ(-122px);
+    
+}
+
+.door > .left {
+    height: 128px;
+    width: 12px;
+    transform: rotateY(-90deg) rotateZ(180deg) translateZ(6px);
+}
+
+.door > .right {
+    height: 128px;
+    width: 12px;
+    transform: rotateY(90deg) rotateZ(180deg) translateZ(58px);
+}
+
+.door > .back {
+    height: 128px;
+    width: 64px;
+    transform: rotateY(180deg) translateZ(6px) scaleX(-1)
+}
+
+.door > .front {
+    height: 128px;
+    width: 64px;
+    transform: translateZ(6px)
+}
