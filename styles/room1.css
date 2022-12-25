@@ -18,6 +18,7 @@
   transform: translateY(256px) rotateX(90deg) translateY(-32px);
   background-image: url("../assets/birch_planks.png");
   background-position: center;
+  animation: obsidianus 1s linear 12s forwards;
 }
 
 .ceiling {
@@ -27,6 +28,7 @@
   transform: translateY(-704px) rotateX(90deg) translateY(-32px);
   background-image: url("../assets/birch_planks.png");
   background-position: center;
+  animation: obsidianus 1s linear 12s forwards;
 }
 
 .wall {
@@ -35,6 +37,7 @@
   background-image: url("../assets/oak_planks.png");
   background-position: center;
   image-rendering: pixelated;
+  animation: obsidianus 1s linear 12s forwards;
 }
 
 .wall1 {
@@ -116,6 +119,10 @@
 
 .wall-col {
   transform-style: preserve-3d;
+}
+
+.wall-col .face {
+  animation: obsidianus 1s linear 12s forwards;
 }
 
 .wall-col > :nth-child(1) {
@@ -490,14 +497,16 @@
 }
 
 .tree {
+  position: absolute;
   width: calc(var(--block-size) * 7);
   height: 100vh;
   transform: translateY(-582px) translateZ(-56px)
     translateX(calc(var(--block-size) * 5)) rotateY(90deg);
   background-image: url(../assets/tree.webp);
   background-size: contain;
+  pointer-events: none;
   opacity: 0;
-  animation: appear 0s linear 11s forwards;
+  animation: appear 2s linear 11s forwards;
 }
 
 #camera {
@@ -508,6 +517,10 @@
   animation: door-open 1s linear 7s forwards;
 }
 
+#viewport:hover .face,
+#viewport:hover .wall,
+#viewport:hover .floor,
+#viewport:hover .ceiling,
 #viewport:hover .tree,
 #viewport:hover #camera,
 #viewport:hover .door {
@@ -555,7 +568,19 @@
 }
 
 @keyframes appear {
-  to {
+  0%, 50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+    background-image: url(../assets/tree.webp), url(../assets/portal.gif);
+    background-blend-mode: overlay;
+    pointer-events: all;
+  }
+}
+
+@keyframes obsidianus {
+  to {
+    background-image: url(../assets/obsidian.png);
   }
 }
