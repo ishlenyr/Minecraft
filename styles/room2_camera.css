@@ -1,0 +1,153 @@
+#camera2 {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center 715px;
+    transform-style: preserve-3d;
+    transition: .1s;
+    transform: 
+              rotateX(0deg) 
+              rotateY(-90deg) 
+              translateX(1480px) 
+              translateY(580px) 
+              translateZ(1080px);
+    will-change: transform;
+    animation: demo 240s 1s forwards ;
+  }
+
+@keyframes demo {
+    1% {
+        transform: 
+            rotateX(0deg) 
+            rotateY(-90deg) 
+            translateX(1580px) 
+            translateY(580px) 
+            translateZ(1080px);
+    }
+    2% {
+        transform: 
+            rotateX(0deg) 
+            rotateY(90deg) 
+            translateX(1580px) 
+            translateY(580px) 
+            translateZ(1080px);
+    }
+    3%,4% {
+        transform: 
+            rotateX(-25deg) 
+            rotateY(-95deg) 
+            translateX(1580px) 
+            translateY(580px) 
+            translateZ(1080px);
+    }
+    5% {
+        transform: 
+            rotateX(0deg) 
+            rotateY(-90deg) 
+            translateX(1728px) 
+            translateY(580px) 
+            translateZ(1128px);
+    }
+    8% {
+        transform: 
+            rotateX(0deg) 
+            rotateY(-90deg) 
+            translateX(1728px) 
+            translateY(64px) 
+            translateZ(1128px);
+    }
+    9% {
+        transform: 
+            rotateX(0deg) 
+            rotateY(20deg) 
+            translateX(1728px) 
+            translateY(64px) 
+            translateZ(1128px);
+    }
+    10% {
+        transform: 
+            rotateX(0deg) 
+            rotateY(-180deg) 
+            translateX(1728px) 
+            translateY(64px) 
+            translateZ(1128px);
+    }
+    14% {
+        transform: 
+            rotateX(0deg) 
+            rotateY(-270deg) 
+            translateX(1728px) 
+            translateY(64px) 
+            translateZ(728px);
+    }
+    17%, 18% {
+        transform: 
+            rotateX(0deg) 
+            rotateY(-290deg) 
+            translateX(1168px) 
+            translateY(64px) 
+            translateZ(728px);
+    }
+    23% {
+        transform: 
+            rotateX(0deg) 
+            rotateY(-270deg) 
+            translateX(268px) 
+            translateY(64px) 
+            translateZ(748px);
+    }
+
+    27% {
+        transform: 
+            rotateX(0deg) 
+            rotateY(-270deg) 
+            translateX(-92px) 
+            translateY(64px) 
+            translateZ(748px);
+    }
+
+    28% {
+        transform: 
+            rotateX(0deg) 
+            rotateY(-180deg) 
+            translateX(-92px) 
+            translateY(64px) 
+            translateZ(748px);
+    }
+
+    29% {
+        transform: 
+            rotateX(0deg) 
+            rotateY(-360deg) 
+            translateX(-92px) 
+            translateY(64px) 
+            translateZ(748px);
+    }
+
+    30% {
+        transform: 
+            rotateX(0deg) 
+            rotateY(-270deg) 
+            translateX(-92px) 
+            translateY(64px) 
+            translateZ(748px);
+    }
+    32% {
+        transform: 
+            rotateX(5deg) 
+            rotateY(-270deg) 
+            translateX(-138px) 
+            translateY(64px) 
+            translateZ(768px);
+    }
+    100% {
+        transform: 
+            rotateX(5deg) 
+            rotateY(-270deg) 
+            translateX(-138px) 
+            translateY(64px) 
+            translateZ(768px);
+    }
+}

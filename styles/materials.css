@@ -1,0 +1,45 @@
+.nether {
+    background-image: url("../assets/nether.png");
+    image-rendering: pixelated;
+}
+
+.nether-gold {
+    background-image: url("../assets/nether_gold_ore.png");
+    image-rendering: pixelated;
+}
+
+.nether-bricks {
+    background-image: url("../assets/nether_bricks.png");
+    image-rendering: pixelated;
+}
+
+.obsidian {
+    background-image: url("../assets/obsidian.png");
+    image-rendering: pixelated;
+}
+
+.lava {
+    background-image: url("../assets/lava.gif");
+    image-rendering: pixelated;
+}
+
+.portal {
+    background-image: url("../assets/portal.gif");
+    image-rendering: pixelated;
+}
+
+.wooden-door {
+    background-image: url("../assets/oak_door_bottom.png"),
+        url("../assets/oak_door_top.png");
+    image-rendering: pixelated;    
+}
+
+.ladder {
+    background-image: url("../assets/ladder.png");
+    image-rendering: pixelated;
+}
+
+.iron-bars {
+    background-image: url("../assets/iron_bars.png");
+    image-rendering: pixelated;
+}

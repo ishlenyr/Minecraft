@@ -1,0 +1,49 @@
+.trapdoor {
+    width: 24px;
+    height: 16px;
+    transform-style: preserve-3d;
+
+}
+
+.spruce-trapdoor > .face {
+    background-image: url("../assets/spruce_trapdoor.png");
+}
+
+.trapdoor > .face {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    transform-style: preserve-3d;
+    image-rendering: pixelated;
+}
+
+.trapdoor > .top {
+    height: 64px;
+    transform: rotateX(90deg) translateZ(32px)
+}
+.trapdoor > .bottom {
+    height: 64px;
+    transform: rotateX(90deg) translateZ(20px)
+}
+
+.trapdoor > .left {
+    height: 12px;
+    transform: rotateY(-90deg) translateZ(32px)
+}
+
+.trapdoor > .right {
+    height: 12px;
+    transform: rotateY(90deg) translateZ(32px)
+}
+
+.trapdoor > .back {
+    height: 12px;
+    transform: rotateY(180deg) translateZ(32px)
+}
+
+.trapdoor > .front {
+    height: 12px;
+    transform: translateZ(32px)
+}

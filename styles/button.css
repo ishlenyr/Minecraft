@@ -1,0 +1,49 @@
+.button {
+    width: 24px;
+    height: 16px;
+    transform-style: preserve-3d;
+
+}
+
+.stone-button > .face {
+    background-image: url("../assets/stone.png");
+}
+
+.button > .face {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    transform-style: preserve-3d;
+    image-rendering: pixelated;
+}
+
+.button > .top {
+    height: 16px;
+    width: 24px;
+    transform: rotateX(90deg) translateZ(8px)
+}
+
+.button > .left {
+    height: 10px;
+    width: 16px;
+    transform: rotateY(-90deg) translateZ(8px)
+}
+
+.button > .right {
+    height: 10px;
+    width: 16px;
+    transform: rotateY(90deg) translateZ(16px)
+}
+
+.button > .back {
+    height: 10px;
+    transform: rotateY(180deg) translateZ(8px)
+}
+
+.button > .front {
+    height: 10px;
+    width: 24px;
+    transform: translateZ(8px)
+}
