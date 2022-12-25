@@ -1,8 +1,8 @@
 :root {
-  --translate-x: -512px;
-  --translate-y: -512px;
-  --translate-z: 1116px;
-  --rotate-y: 250deg;
+  --translate-z: 756px;
+  --translate-y: -532px;
+  --translate-x: -872px;
+  --rotate-y: 268deg;
   --rotate-x: 0deg;
   --block-size: 64px;
 }
@@ -162,10 +162,6 @@
 .door1 {
   transform: translateY(512px) translateZ(-17px) rotateY(90deg);
   transition: transform 1s ease;
-}
-
-.door1:hover {
-  transform: translateY(512px) translateZ(-17px) rotateY(180deg);
 }
 
 .chest {
@@ -364,7 +360,7 @@
 } */
 
 .room2 {
-  transform: translateX(calc(var(--block-size) * -13 + 1px));
+  transform: translateX(calc(var(--block-size) * -12 + 1px));
 }
 
 .room2 .wall3 {
@@ -372,6 +368,20 @@
   width: calc(var(--block-size) * 12);
   transform: translateY(-512px) translateZ(-32px) translateX(-319px)
     rotateY(90deg);
+}
+
+.room2 .wall4 {
+  position: absolute;
+  width: calc(var(--block-size) * 5);
+  transform: translateY(-512px) translateZ(-286px)
+    translateX(calc(var(--block-size) * 10 - 33px)) rotateY(90deg);
+}
+
+.room2 .wall5 {
+  position: absolute;
+  width: calc(var(--block-size) * 5);
+  transform: translateY(-512px) translateZ(206px)
+    translateX(calc(var(--block-size) * 10 - 33px)) rotateY(90deg);
 }
 
 .head {
@@ -478,4 +488,75 @@
 
 .wither-invulnerable2 {
   transform: translateY(518px) translateX(96px) translateZ(302px) rotateY(90deg);
+}
+
+.tree {
+  width: calc(var(--block-size) * 7);
+  height: 100vh;
+  transform: translateY(-582px) translateZ(-56px)
+    translateX(calc(var(--block-size) * 5)) rotateY(90deg);
+  background-image: url(../assets/tree.webp);
+  background-size: contain;
+  opacity: 0;
+  animation: appear 0s linear 11s forwards;
+}
+
+#camera {
+  animation: camera-walk 12s linear forwards;
+}
+
+.door1 {
+  animation: door-open 1s linear 7s forwards;
+}
+
+#viewport:hover .tree,
+#viewport:hover #camera,
+#viewport:hover .door {
+  animation-play-state: paused;
+}
+
+@keyframes camera-walk {
+  16% {
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y))
+      translateX(-372px) translateY(var(--translate-y))
+      translateZ(var(--translate-z));
+  }
+  32%,
+  38% {
+    transform: rotateX(var(--rotate-x)) rotateY(360deg) translateX(-372px)
+      translateY(var(--translate-y)) translateZ(var(--translate-z));
+  }
+  48% {
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y))
+      translateX(-372px) translateY(var(--translate-y))
+      translateZ(var(--translate-z));
+  }
+  60%,
+  64% {
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y))
+      translateX(-152px) translateY(var(--translate-y))
+      translateZ(var(--translate-z));
+  }
+  90% {
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y))
+      translateX(448px) translateY(var(--translate-y))
+      translateZ(var(--translate-z));
+  }
+  95%,
+  100% {
+    transform: rotateX(var(--rotate-x)) rotateY(450deg) translateX(448px)
+      translateY(var(--translate-y)) translateZ(var(--translate-z));
+  }
+}
+
+@keyframes door-open {
+  to {
+    transform: translateY(512px) translateZ(-17px) rotateY(180deg);
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
 }
