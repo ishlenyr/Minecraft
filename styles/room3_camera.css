@@ -1,0 +1,77 @@
+body:hover * {
+    animation-play-state: paused;
+  }
+  
+  body:hover #camera2 {
+    animation-play-state: paused;
+  }
+  
+#camera2 {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center 715px;
+    transform-style: preserve-3d;
+    transition: .1s;
+    transform: 
+              rotateX(0deg) 
+              rotateY(270deg) 
+              translateX(-632px) 
+              translateY(-512px) 
+              translateZ(776px);
+    will-change: transform;
+    animation: demo 120s 1s forwards ;
+  }
+
+  @keyframes demo {
+    2% {
+        transform: 
+              rotateX(0deg) 
+              rotateY(360deg) 
+              translateX(-632px) 
+              translateY(-512px) 
+              translateZ(776px);
+    }
+    4% {
+        transform: 
+              rotateX(0deg) 
+              rotateY(240deg) 
+              translateX(-632px) 
+              translateY(-512px) 
+              translateZ(776px);
+    }
+    5% {
+        transform: 
+              rotateX(0deg) 
+              rotateY(270deg) 
+              translateX(-632px) 
+              translateY(-512px) 
+              translateZ(776px);
+    }
+    8% {
+        transform: 
+              rotateX(0deg) 
+              rotateY(360deg) 
+              translateX(-232px) 
+              translateY(-512px) 
+              translateZ(576px);
+    }
+    10% {
+        transform: 
+              rotateX(0deg) 
+              rotateY(270deg) 
+              translateX(-132px) 
+              translateY(-532px) 
+              translateZ(776px);
+    }
+    18%,100% {
+        transform: 
+              rotateX(0deg) 
+              rotateY(270deg) 
+              translateX(632px) 
+              translateY(-532px) 
+              translateZ(776px);
+    }
+  }

@@ -1,8 +1,8 @@
 :root {
-	--translate-x: -512px;
+	--translate-x: -632px;
 	--translate-y: -512px;
-	--translate-z: 916px;
-	--rotate-y: 250deg;
+	--translate-z: 776px;
+	--rotate-y: 270deg;
 	--rotate-x: 0deg;
 	--block-size: 64px;
 }
@@ -375,6 +375,13 @@
 
 .door1 {
 	transform: translateY(512px) translateZ(-17px) translateX(0px) rotateY(90deg);
+	animation: door-open 1s 13s linear forwards;
+}
+
+@keyframes door-open {
+	to {
+		transform: translateY(512px) translateZ(-17px) translateX(0px) rotateY(180deg);
+	}
 }
 
 .wall13 {
@@ -387,4 +394,49 @@
 	transform: rotateY(90deg)
 		translate3d(calc(var(--block-size) * 1), calc(var(--block-size) * -2.5), calc(var(--block-size) * 4.5))
 		translateY(608px) translateZ(-1151px) translateX(-16px);
+	pointer-events: none;
 }
+
+.accent {
+	animation: accent 1s 23s forwards linear;
+  }
+  
+  @keyframes accent {
+	25% {
+	  pointer-events: all;
+	  filter: brightness(1.5);
+	}
+  
+	50% {
+	  pointer-events: all;
+	  filter: brightness(1);
+	}
+  
+	75% {
+	  pointer-events: all;
+	  filter: brightness(1.5);
+	}
+  
+	100% {
+	  pointer-events: all;
+	  filter: brightness(1);
+	}
+  }
+
+  .reload {
+	background-image: url('../assets/reload_button.png');
+	position: fixed;
+	width: 80px;
+	height: 72px;
+	z-index: 9999;
+  
+	right: 16px;
+	top: -80px;
+	animation: reload-show 1s 24s forwards;
+  }
+  
+  @keyframes reload-show {
+	100% {
+	  top: 16px;
+	}
+  }
