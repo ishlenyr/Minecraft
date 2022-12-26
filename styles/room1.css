@@ -1,9 +1,9 @@
 :root {
-	--translate-x: -512px;
-	--translate-y: -512px;
-	--translate-z: 1116px;
-	--rotate-y: 250deg;
-	--rotate-x: 0deg;
+  --translate-z: 756px;
+  --translate-y: -532px;
+  --translate-x: -872px;
+  --rotate-y: 268deg;
+  --rotate-x: 0deg;
 }
 
 .room {
@@ -13,28 +13,31 @@
 }
 
 .floor {
-	height: calc(var(--block-size) * 12);
-	width: calc(var(--block-size) * 13);
-	transform: translateY(256px) rotateX(90deg) translateY(-32px);
-	background-image: url("../assets/birch_planks.png");
-	background-position: center;
+  height: calc(var(--block-size) * 12);
+  width: calc(var(--block-size) * 13);
+  transform: translateY(256px) rotateX(90deg) translateY(-32px);
+  background-image: url("../assets/birch_planks.png");
+  background-position: center;
+  animation: obsidianus 1s linear 12s forwards;
 }
 
 .ceiling {
-	position: absolute;
-	height: calc(var(--block-size) * 12);
-	width: calc(var(--block-size) * 13);
-	transform: translateY(-704px) rotateX(90deg) translateY(-32px);
-	background-image: url("../assets/birch_planks.png");
-	background-position: center;
+  position: absolute;
+  height: calc(var(--block-size) * 12);
+  width: calc(var(--block-size) * 13);
+  transform: translateY(-704px) rotateX(90deg) translateY(-32px);
+  background-image: url("../assets/birch_planks.png");
+  background-position: center;
+  animation: obsidianus 1s linear 12s forwards;
 }
 
 .wall {
-	height: calc(var(--block-size) * 3);
-	width: calc(var(--block-size) * 12);
-	background-image: url("../assets/oak_planks.png");
-	background-position: center;
-	image-rendering: pixelated;
+  height: calc(var(--block-size) * 3);
+  width: calc(var(--block-size) * 12);
+  background-image: url("../assets/oak_planks.png");
+  background-position: center;
+  image-rendering: pixelated;
+  animation: obsidianus 1s linear 12s forwards;
 }
 
 .wall1 {
@@ -115,6 +118,10 @@
 	transform-style: preserve-3d;
 }
 
+.wall-col .face {
+  animation: obsidianus 1s linear 12s forwards;
+}
+
 .wall-col > :nth-child(1) {
 	transform: translateY(var(--block-size));
 }
@@ -157,10 +164,6 @@
 .door1 {
 	transform: translateY(512px) translateZ(-17px) rotateY(90deg);
 	transition: transform 1s ease;
-}
-
-.door1:hover {
-	transform: translateY(512px) translateZ(-17px) rotateY(180deg);
 }
 
 .chest {
@@ -358,13 +361,28 @@
 } */
 
 .room2 {
-	transform: translateX(calc(var(--block-size) * -13 + 1px));
+  transform: translateX(calc(var(--block-size) * -12 + 1px));
 }
 
 .room2 .wall3 {
-	position: absolute;
-	width: calc(var(--block-size) * 12);
-	transform: translateY(-512px) translateZ(-32px) translateX(-319px) rotateY(90deg);
+  position: absolute;
+  width: calc(var(--block-size) * 12);
+  transform: translateY(-512px) translateZ(-32px) translateX(-319px)
+    rotateY(90deg);
+}
+
+.room2 .wall4 {
+  position: absolute;
+  width: calc(var(--block-size) * 5);
+  transform: translateY(-512px) translateZ(-286px)
+    translateX(calc(var(--block-size) * 10 - 33px)) rotateY(90deg);
+}
+
+.room2 .wall5 {
+  position: absolute;
+  width: calc(var(--block-size) * 5);
+  transform: translateY(-512px) translateZ(206px)
+    translateX(calc(var(--block-size) * 10 - 33px)) rotateY(90deg);
 }
 
 .head {
@@ -467,4 +485,93 @@
 
 .wither-invulnerable2 {
 	transform: translateY(518px) translateX(96px) translateZ(302px) rotateY(90deg);
+}
+
+.tree {
+  position: absolute;
+  width: calc(var(--block-size) * 7);
+  height: 100vh;
+  transform: translateY(-582px) translateZ(-56px)
+    translateX(calc(var(--block-size) * 5)) rotateY(90deg);
+  background-image: url(../assets/tree.webp);
+  background-size: contain;
+  pointer-events: none;
+  opacity: 0;
+  animation: appear 2s linear 11s forwards;
+}
+
+#camera {
+  animation: camera-walk 12s linear forwards;
+}
+
+.door1 {
+  animation: door-open 1s linear 7s forwards;
+}
+
+#viewport:hover .face,
+#viewport:hover .wall,
+#viewport:hover .floor,
+#viewport:hover .ceiling,
+#viewport:hover .tree,
+#viewport:hover #camera,
+#viewport:hover .door {
+  animation-play-state: paused;
+}
+
+@keyframes camera-walk {
+  16% {
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y))
+      translateX(-372px) translateY(var(--translate-y))
+      translateZ(var(--translate-z));
+  }
+  32%,
+  38% {
+    transform: rotateX(var(--rotate-x)) rotateY(360deg) translateX(-372px)
+      translateY(var(--translate-y)) translateZ(var(--translate-z));
+  }
+  48% {
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y))
+      translateX(-372px) translateY(var(--translate-y))
+      translateZ(var(--translate-z));
+  }
+  60%,
+  64% {
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y))
+      translateX(-152px) translateY(var(--translate-y))
+      translateZ(var(--translate-z));
+  }
+  90% {
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y))
+      translateX(448px) translateY(var(--translate-y))
+      translateZ(var(--translate-z));
+  }
+  95%,
+  100% {
+    transform: rotateX(var(--rotate-x)) rotateY(450deg) translateX(448px)
+      translateY(var(--translate-y)) translateZ(var(--translate-z));
+  }
+}
+
+@keyframes door-open {
+  to {
+    transform: translateY(512px) translateZ(-17px) rotateY(180deg);
+  }
+}
+
+@keyframes appear {
+  0%, 50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+    background-image: url(../assets/tree.webp), url(../assets/portal.gif);
+    background-blend-mode: overlay;
+    pointer-events: all;
+  }
+}
+
+@keyframes obsidianus {
+  to {
+    background-image: url(../assets/obsidian.png);
+  }
 }
