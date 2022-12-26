@@ -39,7 +39,7 @@
 .wall2 {
 	position: absolute;
 	width: calc(var(--block-size) * 24);
-	transform: translateY(-512px) translateZ(366px) translateX(-830px);
+	transform: translateY(-512px) translateZ(336px) translateX(-830px);
 }
 
 .wall3 {
@@ -61,16 +61,77 @@
 }
 
 .wall6 {
+	background-image: url("../assets/obsidian.png");
 	position: absolute;
 	width: calc(var(--block-size) * 13);
 	transform: translateY(-512px) translateZ(-14px) translateX(-1216px) rotateY(90deg);
 }
 
+.wall7 {
+	background-image: url("../assets/cobbled_deepslate.png");
+	position: absolute;
+	height: 64px;
+	width: calc(var(--block-size) * 13);
+	transform: translateY(-384px) translateZ(-178px) translateX(-800px);
+}
+
+.wall8 {
+	background-image: url("../assets/cobbled_deepslate.png");
+	position: absolute;
+	height: 64px;
+	width: calc(var(--block-size) * 13);
+	transform: translateY(-416px) translateZ(-208px) translateX(-800px) rotateX(90deg);
+}
+
+.wall9 {
+	background-image: url("../assets/cobbled_deepslate.png");
+	position: absolute;
+	height: 64px;
+	width: calc(var(--block-size) * 13);
+	transform: translateY(-384px) translateZ(80px) translateX(-800px);
+}
+
+.wall10 {
+	background-image: url("../assets/cobbled_deepslate.png");
+	position: absolute;
+	height: 64px;
+	width: calc(var(--block-size) * 13);
+	transform: translateY(-416px) translateZ(112px) translateX(-800px) rotateX(90deg);
+}
+
+.wall11 {
+	background-image: url("../assets/glowstone.png");
+	position: absolute;
+	width: calc(var(--block-size) * 6);
+	transform: translateY(-512px) translateZ(238px) translateX(-190px) rotateY(90deg);
+}
+
+.wall12 {
+	background-image: url("../assets/glowstone.png");
+	position: absolute;
+	width: calc(var(--block-size) * 6);
+	transform: translateY(-512px) translateZ(-294px) translateX(-190px) rotateY(90deg);
+}
+
+.wall14 {
+	background-image: url("../assets/lava.gif");
+	position: absolute;
+	width: calc(var(--block-size) * 12 + 50px);
+	transform: translateY(-480px) translateZ(-330px) translateX(-800px) rotateX(90deg);
+}
+
+.wall15 {
+	background-image: url("../assets/lava.gif");
+	position: absolute;
+	width: calc(var(--block-size) * 12 + 50px);
+	transform: translateY(-480px) translateZ(240px) translateX(-800px) rotateX(90deg);
+}
+
 .grass-wall {
 	background-image: url("../assets/azalea_leaves.png");
 	position: absolute;
-	width: calc(var(--block-size) * 12);
-	transform: translateY(448px) translateZ(270px) translateX(-70px);
+	width: calc(var(--block-size) * 11);
+	transform: translateY(448px) translateZ(270px) translateX(66px);
 }
 
 .face {
@@ -89,22 +150,22 @@
 }
 
 .top {
-	background-image: url("../assets/dark_oak_log_top.png");
+	background-image: url("../assets/dark_oak_log.png");
 	transform: rotateX(90deg) translateZ(32px);
 }
 
 .bottom {
-	background-image: url("../assets/dark_oak_log_top.png");
+	background-image: url("../assets/dark_oak_log.png");
 	transform: rotateX(-90deg) translateZ(32px);
 }
 
 .left {
-	background-image: url("../assets/dark_oak_log_top.png");
+	background-image: url("../assets/dark_oak_log.png");
 	transform: rotateY(-90deg) translateZ(32px);
 }
 
 .right {
-	background-image: url("../assets/dark_oak_log_top.png");
+	background-image: url("../assets/dark_oak_log.png");
 	transform: rotateY(90deg) translateZ(32px);
 }
 
@@ -277,11 +338,34 @@
 	background-image: url(../assets/furnace_top.png);
 }
 
+.dispenser1 {
+	transform: translateY(576px) translateX(96px) translateZ(208px) rotateY(90deg);
+}
+
+.dispenser2 {
+	transform: translateY(576px) translateX(96px) translateZ(146px) rotateY(90deg);
+}
+
+.dispenser .front,
+.dispenser .back {
+	background-image: url(../assets/dispenser_front.png);
+}
+
+.dispenser .left,
+.dispenser .right {
+	background-image: url(../assets/furnace_side.png);
+}
+
+.dispenser .top,
+.dispenser .bottom {
+	background-image: url(../assets/furnace_top.png);
+}
+
 .door {
 	width: var(--block-size);
 	height: calc(var(--block-size) * 2);
 	position: absolute;
-	background-image: url("../assets/spruce_door_bottom.png"), url("../assets/spruce_door_top.png");
+	background-image: url("../assets/dark_oak_door_bottom.png"), url("../assets/dark_oak_door_top.png");
 	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: bottom, top;
@@ -291,4 +375,16 @@
 
 .door1 {
 	transform: translateY(512px) translateZ(-17px) translateX(0px) rotateY(90deg);
+}
+
+.wall13 {
+	background-image: url("../assets/portal.gif");
+	pointer-events: none;
+	position: absolute;
+	opacity: 60%;
+	height: calc(var(--block-size) * 3);
+	width: calc(var(--block-size) * 2);
+	transform: rotateY(90deg)
+		translate3d(calc(var(--block-size) * 1), calc(var(--block-size) * -2.5), calc(var(--block-size) * 4.5))
+		translateY(608px) translateZ(-1151px) translateX(-16px);
 }
