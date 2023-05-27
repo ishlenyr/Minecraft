@@ -508,6 +508,7 @@
   animation: door-open 1s linear 7s forwards;
 }
 
+/* removed annoing pause
 #viewport:hover .face,
 #viewport:hover .wall,
 #viewport:hover .floor,
@@ -517,6 +518,7 @@
 #viewport:hover .door {
   animation-play-state: paused;
 }
+*/
 
 @keyframes camera-walk {
   16% {

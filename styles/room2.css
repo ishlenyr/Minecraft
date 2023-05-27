@@ -6,6 +6,7 @@
   --rotate-x: 0deg;
 }
 
+/* removed annoing pause
 body:hover * {
   animation-play-state: paused;
 }
@@ -13,6 +14,7 @@ body:hover * {
 body:hover #camera2 {
   animation-play-state: paused;
 }
+*/
 
 .reload {
   background-image: url('../assets/reload_button.png');

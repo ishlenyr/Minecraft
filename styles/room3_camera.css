@@ -1,3 +1,4 @@
+/* removed annoing pause
 body:hover * {
     animation-play-state: paused;
   }
@@ -5,6 +6,8 @@ body:hover * {
   body:hover #camera2 {
     animation-play-state: paused;
   }
+*/
+
   
 #camera2 {
     height: 0;
