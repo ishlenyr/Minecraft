@@ -1,0 +1,42 @@
+:root {
+    --block-size: 64px;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  margin: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+#viewport {
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: scale3d(-1, 1, 1);
+  perspective: 715px;
+}
+
+#camera {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center 715px;
+  transform-style: preserve-3d;
+  transition: transform 0.1s;
+  transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y))
+    translateX(var(--translate-x)) translateY(var(--translate-y))
+    translateZ(var(--translate-z));
+  will-change: transform;
+}
+
+#scene {
+  height: 0px;
+  width: 0px;
+  transform-style: preserve-3d;
+}

@@ -1,0 +1,93 @@
+.torch {
+    width: 8px;
+    height: 40px;
+    transform-style: preserve-3d;
+
+}
+
+.soul-torch > .face {
+    background-image: url("../assets/soul_torch.png");
+}
+
+.torch > .face {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8px;
+    
+    background-position: -28px -24px;
+    transform-style: preserve-3d;
+    image-rendering: pixelated;
+}
+
+.torch > .top {
+    height: 8px;
+    transform: rotateX(90deg) translateZ(4px)
+}
+
+.torch > .left {
+    height: 40px;
+    transform: rotateY(-90deg) translateZ(4px)
+}
+
+.torch > .right {
+    height: 40px;
+    transform: rotateY(90deg) translateZ(4px)
+}
+
+.torch > .back {
+    height: 40px;
+    transform: rotateY(180deg) translateZ(4px)
+}
+
+.torch > .front {
+    height: 40px;
+    transform: translateZ(4px)
+}
+
+.torch > .particle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform-style: preserve-3d;
+    image-rendering: pixelated;
+
+    height: 16px;
+    width: 16px;
+    background-size: 100% 100%;
+    background-image: url("../assets/soul_fire_flame.png");
+    transform-origin: center -16px center;
+
+}
+
+.torch > .part1 {
+    height: 8px;
+    width: 8px;
+    animation: torch-particle 2s ease-in infinite 100ms;
+    transform: rotateY(90deg) translateY(-16px) translateX(-2px);
+}
+
+.torch > .part2 {
+    height: 16px;
+    width: 16px;
+    animation: torch-particle 2s ease-in infinite 300ms;
+    transform: rotateY(90deg) translateY(-16px) translateZ(-2px);
+}
+
+.torch > .part3 {
+    height: 10px;
+    width: 10px;
+    animation: torch-particle 2s ease-in infinite 200ms;
+    transform: rotateY(90deg) translateY(-16px) translateX(2px);
+}
+
+@keyframes torch-particle {
+    100% {
+        height: 0;
+        width: 0;
+        transform: rotateY(90deg) translateY(0px);
+    }
+}

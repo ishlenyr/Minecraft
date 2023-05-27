@@ -1,0 +1,577 @@
+:root {
+  --translate-z: 756px;
+  --translate-y: -532px;
+  --translate-x: -872px;
+  --rotate-y: 268deg;
+  --rotate-x: 0deg;
+}
+
+.room {
+	height: 0px;
+	width: 0px;
+	transform-style: preserve-3d;
+}
+
+.floor {
+  height: calc(var(--block-size) * 12);
+  width: calc(var(--block-size) * 13);
+  transform: translateY(256px) rotateX(90deg) translateY(-32px);
+  background-image: url("../assets/birch_planks.png");
+  background-position: center;
+  animation: obsidianus 1s linear 12s forwards;
+}
+
+.ceiling {
+  position: absolute;
+  height: calc(var(--block-size) * 12);
+  width: calc(var(--block-size) * 13);
+  transform: translateY(-704px) rotateX(90deg) translateY(-32px);
+  background-image: url("../assets/birch_planks.png");
+  background-position: center;
+  animation: obsidianus 1s linear 12s forwards;
+}
+
+.wall {
+  height: calc(var(--block-size) * 3);
+  width: calc(var(--block-size) * 12);
+  background-image: url("../assets/oak_planks.png");
+  background-position: center;
+  image-rendering: pixelated;
+  animation: obsidianus 1s linear 12s forwards;
+}
+
+.wall1 {
+	transform: translateY(-320px) translateZ(-416px) translateX(var(--block-size));
+}
+
+.wall2 {
+	position: absolute;
+	transform: translateY(-512px) translateZ(352px) translateX(var(--block-size));
+}
+
+.wall3 {
+	position: absolute;
+	width: calc(var(--block-size) * 5);
+	transform: translateY(-512px) translateZ(-286px) translateX(-96px) rotateY(90deg);
+}
+
+.wall4 {
+	position: absolute;
+	width: calc(var(--block-size) * 5);
+	transform: translateY(-512px) translateZ(206px) translateX(-96px) rotateY(90deg);
+}
+
+.face {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 64px;
+	height: 64px;
+}
+
+.cube {
+	transform-style: preserve-3d;
+	transform-origin: center;
+	--cube-offset-z: 32px;
+	--cube-offset-y: 0px;
+	--cube-offset-x: 0px;
+}
+
+.top {
+	background-image: url("../assets/oak_planks.png");
+	transform: rotateX(90deg) translateX(var(--cube-offset-x)) translateY(var(--cube-offset-y))
+		translateZ(var(--cube-offset-z));
+}
+
+.bottom {
+	background-image: url("../assets/oak_planks.png");
+	transform: rotateX(-90deg) translateX(var(--cube-offset-x)) translateY(var(--cube-offset-y))
+		translateZ(var(--cube-offset-z));
+}
+
+.left {
+	background-image: url("../assets/oak_planks.png");
+	transform: rotateY(-90deg) translateX(var(--cube-offset-x)) translateY(var(--cube-offset-y))
+		translateZ(var(--cube-offset-z));
+}
+
+.right {
+	background-image: url("../assets/oak_planks.png");
+	transform: rotateY(90deg) translateX(var(--cube-offset-x)) translateY(var(--cube-offset-y))
+		translateZ(var(--cube-offset-z));
+}
+
+.back {
+	background-image: url("../assets/oak_planks.png");
+	transform: rotateY(180deg) translateX(var(--cube-offset-x)) translateY(var(--cube-offset-y))
+		translateZ(var(--cube-offset-z));
+}
+
+.front {
+	background-image: url("../assets/oak_planks.png");
+	transform: translateX(var(--cube-offset-x)) translateY(var(--cube-offset-y)) translateZ(var(--cube-offset-z));
+}
+
+.wall-col {
+	transform-style: preserve-3d;
+}
+
+.wall-col .face {
+  animation: obsidianus 1s linear 12s forwards;
+}
+
+.wall-col > :nth-child(1) {
+	transform: translateY(var(--block-size));
+}
+
+.wall-col > :nth-child(2) {
+	transform: translateY(calc(var(--block-size) * 2));
+}
+
+.wall-col > :nth-child(3) {
+	transform: translateY(calc(var(--block-size) * 3));
+}
+
+.wall-col1 {
+	position: absolute;
+	transform: translateY(384px) translateZ(-81px) translateX(32px) rotateY(90deg);
+}
+
+.wall-col2 {
+	position: absolute;
+	transform: translateY(384px) translateZ(47px) translateX(32px) rotateY(90deg);
+}
+
+.wall-col3 {
+	position: absolute;
+	transform: translateY(384px) translateZ(-17px) translateX(32px) rotateY(90deg);
+}
+
+.door {
+	width: var(--block-size);
+	height: calc(var(--block-size) * 2);
+	position: absolute;
+	background-image: url("../assets/spruce_door_bottom.png"), url("../assets/spruce_door_top.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom, top;
+	image-rendering: pixelated;
+	transform-origin: left;
+}
+
+.door1 {
+	transform: translateY(512px) translateZ(-17px) rotateY(90deg);
+	transition: transform 1s ease;
+}
+
+.chest {
+	--cube-offset-z: 28px;
+}
+
+.chest > div {
+	background-image: url(../assets/normal.png);
+	width: 56px;
+	height: 56px;
+	--chest-size: 56px;
+	--chest-cover-size: 20px;
+}
+
+.chest .front {
+	background-position: -56px -76px;
+}
+
+.chest .right {
+	background-position: -112px 0px;
+}
+
+.chest .left {
+	background-position: -112px 0px;
+}
+
+.chest .back {
+	background-position: -56px -76px;
+}
+
+.chest .top {
+	background-position: -56px -76px;
+}
+
+.chest .bottom {
+	background-position: -56px 0;
+}
+
+.chest-cover.chest-cover {
+	width: var(--chest-size);
+	height: var(--chest-cover-size);
+}
+
+.chest-cover.front,
+.chest-cover.back,
+.chest-cover.left,
+.chest-cover.right {
+	background-position: -56px -56px;
+}
+
+.chest-lock.chest-lock {
+	width: 8px;
+	height: 16px;
+	background-position: 0px 0px;
+	--cube-offset-x: 24px;
+	--cube-offset-y: 11px;
+}
+
+.ender-chest > div {
+	background-image: url(../assets/ender.png);
+}
+
+.chest1 {
+	transform: translateY(584px) translateX(94px) translateZ(-84px) rotateY(90deg);
+}
+
+.chest2 {
+	transform: translateY(584px) translateX(355px) translateZ(-388px);
+}
+
+.workbench {
+	transform: translateY(576px) translateX(96px) translateZ(111px) rotateY(90deg);
+}
+
+.workbench .front,
+.workbench .back {
+	background-image: url(../assets/crafting_table_front.png);
+}
+
+.workbench .left,
+.workbench .right {
+	background-image: url(../assets/crafting_table_side.png);
+}
+
+.workbench .top,
+.workbench .bottom {
+	background-image: url(../assets/crafting_table_top.png);
+}
+
+.furnace {
+	transform: translateY(576px) translateX(96px) translateZ(175px) rotateY(90deg);
+}
+
+.furnace .front,
+.furnace .back {
+	background-image: url(../assets/furnace_front.png);
+}
+
+.furnace .left,
+.furnace .right {
+	background-image: url(../assets/furnace_side.png);
+}
+
+.furnace .top,
+.furnace .bottom {
+	background-image: url(../assets/furnace_top.png);
+}
+
+.dispenser1 {
+	transform: translateY(576px) translateX(96px) translateZ(352px) rotateY(90deg);
+}
+
+.dispenser2 {
+	transform: translateY(576px) translateX(96px) translateZ(-352px) rotateY(90deg);
+}
+
+.dispenser .front,
+.dispenser .back {
+	background-image: url(../assets/dispenser_front.png);
+}
+
+.dispenser .left,
+.dispenser .right {
+	background-image: url(../assets/furnace_side.png);
+}
+
+.dispenser .top,
+.dispenser .bottom {
+	background-image: url(../assets/furnace_top.png);
+}
+
+.bookshelf {
+	position: absolute;
+}
+
+.bookshelf .front,
+.bookshelf .back,
+.bookshelf .left,
+.bookshelf .right {
+	background-image: url(../assets/bookshelf.png);
+}
+
+.bookshelf .top,
+.bookshelf .bottom {
+	background-image: url(../assets/oak_planks.png);
+}
+
+.bookshelf1 {
+	transform: translateY(384px) translateX(64px) translateZ(-384px);
+}
+
+.bookshelf2 {
+	transform: translateY(448px) translateX(64px) translateZ(-320px);
+}
+
+.bookshelf3 {
+	transform: translateY(448px) translateX(128px) translateZ(-384px);
+}
+
+.bookshelf4 {
+	transform: translateY(512px) translateX(64px) translateZ(-256px);
+}
+
+.bookshelf5 {
+	transform: translateY(512px) translateX(192px) translateZ(-384px);
+}
+
+.enchanting-table {
+	position: absolute;
+	transform: translateY(576px) translateX(192px) translateZ(-256px);
+	--cube-offset-z: 31px;
+}
+
+.enchanting-table .front,
+.enchanting-table .back,
+.enchanting-table .right,
+.enchanting-table .left {
+	background-image: url(../assets/enchanting_table_side.png);
+}
+
+.enchanting-table .bottom {
+	background-image: url(../assets/enchanting_table_bottom.png);
+}
+
+.enchanting-table .top {
+	background-image: url(../assets/enchanting_table_top.png);
+	--cube-offset-z: 16px;
+}
+
+/* .wall,
+.floor,
+.ceiling,
+.face {
+  filter: brightness(80%);
+} */
+
+.room2 {
+  transform: translateX(calc(var(--block-size) * -12 + 1px));
+}
+
+.room2 .wall3 {
+  position: absolute;
+  width: calc(var(--block-size) * 12);
+  transform: translateY(-512px) translateZ(-32px) translateX(-319px)
+    rotateY(90deg);
+}
+
+.room2 .wall4 {
+  position: absolute;
+  width: calc(var(--block-size) * 5);
+  transform: translateY(-512px) translateZ(-286px)
+    translateX(calc(var(--block-size) * 10 - 33px)) rotateY(90deg);
+}
+
+.room2 .wall5 {
+  position: absolute;
+  width: calc(var(--block-size) * 5);
+  transform: translateY(-512px) translateZ(206px)
+    translateX(calc(var(--block-size) * 10 - 33px)) rotateY(90deg);
+}
+
+.head {
+	--head-size: 32px;
+	--cube-offset-z: 16px;
+}
+
+.head > div {
+	width: var(--head-size);
+	height: var(--head-size);
+}
+
+.head .front {
+	background-position: -32px -32px;
+}
+
+.head .left {
+	background-position: 0 -32px;
+}
+
+.head .right {
+	background-position: -64px -32px;
+}
+
+.head .top {
+	background-position: -32px 0;
+}
+
+.head .back {
+	background-position: -64px 0;
+}
+
+.head .bottom {
+	background-position: -96px -32px;
+}
+
+.creeper > div {
+	background-image: url(../assets/creeper.png);
+}
+
+.zombie > div {
+	background-image: url(../assets/zombie.png);
+}
+
+.skeleton > div {
+	background-image: url(../assets/skeleton.png);
+}
+
+.wither-skeleton > div {
+	background-image: url(../assets/wither_skeleton.png);
+}
+
+.steve > div {
+	background-image: url(../assets/steve.png);
+}
+
+.wither-invulnerable > div {
+	background-image: url(../assets/wither_invulnerable.png);
+}
+
+.creeper {
+	transform: translateY(518px) translateX(96px) translateZ(-18px) rotateY(90deg);
+}
+
+.zombie1 {
+	transform: translateY(518px) translateX(96px) translateZ(-82px) rotateY(90deg);
+}
+
+.zombie2 {
+	transform: translateY(518px) translateX(96px) translateZ(46px) rotateY(90deg);
+}
+
+.skeleton1 {
+	transform: translateY(518px) translateX(96px) translateZ(-146px) rotateY(90deg);
+}
+
+.skeleton2 {
+	transform: translateY(518px) translateX(96px) translateZ(110px) rotateY(90deg);
+}
+
+.wither-skeleton1 {
+	transform: translateY(518px) translateX(96px) translateZ(-210px) rotateY(90deg);
+}
+
+.wither-skeleton2 {
+	transform: translateY(518px) translateX(96px) translateZ(174px) rotateY(90deg);
+}
+
+.steve1 {
+	transform: translateY(518px) translateX(96px) translateZ(-274px) rotateY(90deg);
+}
+
+.steve2 {
+	transform: translateY(518px) translateX(96px) translateZ(238px) rotateY(90deg);
+}
+
+.wither-invulnerable1 {
+	transform: translateY(518px) translateX(96px) translateZ(-338px) rotateY(90deg);
+}
+
+.wither-invulnerable2 {
+	transform: translateY(518px) translateX(96px) translateZ(302px) rotateY(90deg);
+}
+
+.tree {
+  position: absolute;
+  width: calc(var(--block-size) * 7);
+  height: 100vh;
+  transform: translateY(-582px) translateZ(-56px)
+    translateX(calc(var(--block-size) * 5)) rotateY(90deg);
+  background-image: url(../assets/tree.webp);
+  background-size: contain;
+  pointer-events: none;
+  opacity: 0;
+  animation: appear 2s linear 11s forwards;
+}
+
+#camera {
+  animation: camera-walk 12s linear forwards;
+}
+
+.door1 {
+  animation: door-open 1s linear 7s forwards;
+}
+
+#viewport:hover .face,
+#viewport:hover .wall,
+#viewport:hover .floor,
+#viewport:hover .ceiling,
+#viewport:hover .tree,
+#viewport:hover #camera,
+#viewport:hover .door {
+  animation-play-state: paused;
+}
+
+@keyframes camera-walk {
+  16% {
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y))
+      translateX(-372px) translateY(var(--translate-y))
+      translateZ(var(--translate-z));
+  }
+  32%,
+  38% {
+    transform: rotateX(var(--rotate-x)) rotateY(360deg) translateX(-372px)
+      translateY(var(--translate-y)) translateZ(var(--translate-z));
+  }
+  48% {
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y))
+      translateX(-372px) translateY(var(--translate-y))
+      translateZ(var(--translate-z));
+  }
+  60%,
+  64% {
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y))
+      translateX(-152px) translateY(var(--translate-y))
+      translateZ(var(--translate-z));
+  }
+  90% {
+    transform: rotateX(var(--rotate-x)) rotateY(var(--rotate-y))
+      translateX(448px) translateY(var(--translate-y))
+      translateZ(var(--translate-z));
+  }
+  95%,
+  100% {
+    transform: rotateX(var(--rotate-x)) rotateY(450deg) translateX(448px)
+      translateY(var(--translate-y)) translateZ(var(--translate-z));
+  }
+}
+
+@keyframes door-open {
+  to {
+    transform: translateY(512px) translateZ(-17px) rotateY(180deg);
+  }
+}
+
+@keyframes appear {
+  0%, 50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+    background-image: url(../assets/tree.webp), url(../assets/portal.gif);
+    background-blend-mode: overlay;
+    pointer-events: all;
+  }
+}
+
+@keyframes obsidianus {
+  to {
+    background-image: url(../assets/obsidian.png);
+  }
+}

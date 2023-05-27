@@ -1,0 +1,442 @@
+:root {
+	--translate-x: -632px;
+	--translate-y: -512px;
+	--translate-z: 776px;
+	--rotate-y: 270deg;
+	--rotate-x: 0deg;
+	--block-size: 64px;
+}
+
+.floor {
+	height: calc(var(--block-size) * 12);
+	width: calc(var(--block-size) * 24);
+	transform: translateY(256px) rotateX(90deg) translateY(-17px) translateX(-830px);
+	background-image: url("../assets/dark_oak_log_top.png");
+	background-position: center;
+}
+
+.roof {
+	height: calc(var(--block-size) * 12);
+	width: calc(var(--block-size) * 24);
+	transform: translateY(-895px) rotateX(90deg) translateY(-18px) translateX(-830px);
+	background-image: url("../assets/mangrove_log_top.png");
+	background-position: center;
+}
+
+.wall {
+	height: calc(var(--block-size) * 3);
+	width: calc(var(--block-size) * 12);
+	background-image: url("../assets/dark_oak_log.png");
+	background-position: center;
+	image-rendering: pixelated;
+}
+
+.wall1 {
+	width: calc(var(--block-size) * 24);
+	transform: translateY(-320px) translateZ(-400px) translateX(-830px);
+}
+
+.wall2 {
+	position: absolute;
+	width: calc(var(--block-size) * 24);
+	transform: translateY(-512px) translateZ(336px) translateX(-830px);
+}
+
+.wall3 {
+	position: absolute;
+	width: calc(var(--block-size) * 4);
+	transform: translateY(-512px) translateZ(-272px) translateX(-96px) rotateY(90deg);
+}
+
+.wall4 {
+	position: absolute;
+	width: calc(var(--block-size) * 5);
+	transform: translateY(-512px) translateZ(206px) translateX(-96px) rotateY(90deg);
+}
+
+.wall5 {
+	position: absolute;
+	width: calc(var(--block-size) * 13);
+	transform: translateY(-512px) translateZ(-14px) translateX(260px) rotateY(90deg);
+}
+
+.wall6 {
+	background-image: url("../assets/obsidian.png");
+	position: absolute;
+	width: calc(var(--block-size) * 13);
+	transform: translateY(-512px) translateZ(-14px) translateX(-1216px) rotateY(90deg);
+}
+
+.wall7 {
+	background-image: url("../assets/cobbled_deepslate.png");
+	position: absolute;
+	height: 64px;
+	width: calc(var(--block-size) * 13);
+	transform: translateY(-384px) translateZ(-178px) translateX(-800px);
+}
+
+.wall8 {
+	background-image: url("../assets/cobbled_deepslate.png");
+	position: absolute;
+	height: 64px;
+	width: calc(var(--block-size) * 13);
+	transform: translateY(-416px) translateZ(-208px) translateX(-800px) rotateX(90deg);
+}
+
+.wall9 {
+	background-image: url("../assets/cobbled_deepslate.png");
+	position: absolute;
+	height: 64px;
+	width: calc(var(--block-size) * 13);
+	transform: translateY(-384px) translateZ(80px) translateX(-800px);
+}
+
+.wall10 {
+	background-image: url("../assets/cobbled_deepslate.png");
+	position: absolute;
+	height: 64px;
+	width: calc(var(--block-size) * 13);
+	transform: translateY(-416px) translateZ(112px) translateX(-800px) rotateX(90deg);
+}
+
+.wall11 {
+	background-image: url("../assets/glowstone.png");
+	position: absolute;
+	width: calc(var(--block-size) * 6);
+	transform: translateY(-512px) translateZ(238px) translateX(-190px) rotateY(90deg);
+}
+
+.wall12 {
+	background-image: url("../assets/glowstone.png");
+	position: absolute;
+	width: calc(var(--block-size) * 6);
+	transform: translateY(-512px) translateZ(-294px) translateX(-190px) rotateY(90deg);
+}
+
+.wall14 {
+	background-image: url("../assets/lava.gif");
+	position: absolute;
+	width: calc(var(--block-size) * 12 + 50px);
+	transform: translateY(-480px) translateZ(-330px) translateX(-800px) rotateX(90deg);
+}
+
+.wall15 {
+	background-image: url("../assets/lava.gif");
+	position: absolute;
+	width: calc(var(--block-size) * 12 + 50px);
+	transform: translateY(-480px) translateZ(240px) translateX(-800px) rotateX(90deg);
+}
+
+.grass-wall {
+	background-image: url("../assets/azalea_leaves.png");
+	position: absolute;
+	width: calc(var(--block-size) * 11);
+	transform: translateY(448px) translateZ(270px) translateX(66px);
+}
+
+.face {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	width: 64px;
+	height: 64px;
+}
+
+.cube {
+	transform-style: preserve-3d;
+	transform-origin: center;
+}
+
+.top {
+	background-image: url("../assets/dark_oak_log.png");
+	transform: rotateX(90deg) translateZ(32px);
+}
+
+.bottom {
+	background-image: url("../assets/dark_oak_log.png");
+	transform: rotateX(-90deg) translateZ(32px);
+}
+
+.left {
+	background-image: url("../assets/dark_oak_log.png");
+	transform: rotateY(-90deg) translateZ(32px);
+}
+
+.right {
+	background-image: url("../assets/dark_oak_log.png");
+	transform: rotateY(90deg) translateZ(32px);
+}
+
+.back {
+	background-image: url("../assets/dark_oak_log_top.png");
+	transform: rotateY(180deg) translateZ(32px);
+}
+
+.front {
+	background-image: url("../assets/dark_oak_log_top.png");
+	transform: translateZ(32px);
+}
+
+.wall-col {
+	transform-style: preserve-3d;
+}
+
+.wall-col > :nth-child(1) {
+	transform: translateY(var(--block-size));
+}
+
+.wall-col > :nth-child(2) {
+	transform: translateY(calc(var(--block-size) * 2));
+}
+
+.wall-col > :nth-child(3) {
+	transform: translateY(calc(var(--block-size) * 3));
+}
+
+.wall-col1 {
+	position: absolute;
+	transform: translateY(384px) translateZ(-81px) translateX(32px) rotateY(90deg);
+}
+
+.wall-col2 {
+	position: absolute;
+	transform: translateY(384px) translateZ(47px) translateX(32px) rotateY(90deg);
+}
+
+.wall-col3 {
+	position: absolute;
+	transform: translateY(384px) translateZ(-17px) translateX(32px) rotateY(90deg);
+}
+
+.bookshelf {
+	position: absolute;
+}
+
+.bookshelf .front,
+.bookshelf .back,
+.bookshelf .left,
+.bookshelf .right {
+	background-image: url(../assets/bookshelf.png);
+}
+
+.bookshelf .top,
+.bookshelf .bottom {
+	background-image: url(../assets/oak_planks.png);
+}
+
+.bookshelf1 {
+	transform: translateY(384px) translateX(158px) translateZ(-342px);
+}
+
+.bookshelf2 {
+	transform: translateY(384px) translateX(222px) translateZ(-342px);
+}
+
+.bookshelf3 {
+	transform: translateY(384px) translateX(286px) translateZ(-342px);
+}
+
+.bookshelf4 {
+	transform: translateY(384px) translateX(94px) translateZ(-150px);
+}
+
+.bookshelf5 {
+	transform: translateY(384px) translateX(94px) translateZ(-214px);
+}
+
+.bookshelf6 {
+	transform: translateY(384px) translateX(94px) translateZ(-278px);
+}
+
+.bookshelf7 {
+	transform: translateY(384px) translateX(350px) translateZ(-150px);
+}
+
+.bookshelf8 {
+	transform: translateY(384px) translateX(350px) translateZ(-214px);
+}
+
+.bookshelf9 {
+	transform: translateY(384px) translateX(350px) translateZ(-278px);
+}
+
+.enchanting-table {
+	position: absolute;
+	transform: translateY(576px) translateX(228px) translateZ(-212px);
+	--cube-offset-z: 31px;
+}
+
+.enchanting-table .front,
+.enchanting-table .back,
+.enchanting-table .right,
+.enchanting-table .left {
+	background-image: url(../assets/enchanting_table_side.png);
+}
+
+.enchanting-table .bottom {
+	background-image: url(../assets/enchanting_table_bottom.png);
+}
+
+.enchanting-table .top {
+	background-image: url(../assets/enchanting_table_top.png);
+	--cube-offset-z: 16px;
+}
+
+.jukebox .front,
+.jukebox .back,
+.jukebox .right,
+.jukebox .left {
+	background-image: url(../assets/jukebox_side.png);
+}
+
+.jukebox .top {
+	background-image: url(../assets/jukebox_top.png);
+	--cube-offset-z: 16px;
+}
+
+.jukebox {
+	transform: translateY(576px) translateX(496px) translateZ(-333px) rotateY(90deg);
+}
+
+.workbench {
+	transform: translateY(576px) translateX(556px) translateZ(-333px) rotateY(90deg);
+}
+
+.workbench .front,
+.workbench .back {
+	background-image: url(../assets/crafting_table_front.png);
+}
+
+.workbench .left,
+.workbench .right {
+	background-image: url(../assets/crafting_table_side.png);
+}
+
+.workbench .top,
+.workbench .bottom {
+	background-image: url(../assets/crafting_table_top.png);
+}
+
+.furnace {
+	transform: translateY(576px) translateX(618px) translateZ(-333px) rotateY(90deg);
+}
+
+.furnace .front,
+.furnace .right,
+.furnace .back {
+	background-image: url(../assets/furnace_side.png);
+}
+
+.furnace .left {
+	background-image: url(../assets/furnace_front.png);
+}
+
+.furnace .top,
+.furnace .bottom {
+	background-image: url(../assets/furnace_top.png);
+}
+
+.dispenser1 {
+	transform: translateY(576px) translateX(96px) translateZ(208px) rotateY(90deg);
+}
+
+.dispenser2 {
+	transform: translateY(576px) translateX(96px) translateZ(146px) rotateY(90deg);
+}
+
+.dispenser .front,
+.dispenser .back {
+	background-image: url(../assets/dispenser_front.png);
+}
+
+.dispenser .left,
+.dispenser .right {
+	background-image: url(../assets/furnace_side.png);
+}
+
+.dispenser .top,
+.dispenser .bottom {
+	background-image: url(../assets/furnace_top.png);
+}
+
+.door {
+	width: var(--block-size);
+	height: calc(var(--block-size) * 2);
+	position: absolute;
+	background-image: url("../assets/dark_oak_door_bottom.png"), url("../assets/dark_oak_door_top.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom, top;
+	image-rendering: pixelated;
+	transform-origin: left;
+}
+
+.door1 {
+	transform: translateY(512px) translateZ(-17px) translateX(0px) rotateY(90deg);
+	animation: door-open 1s 13s linear forwards;
+}
+
+@keyframes door-open {
+	to {
+		transform: translateY(512px) translateZ(-17px) translateX(0px) rotateY(180deg);
+	}
+}
+
+.wall13 {
+	background-image: url("../assets/portal.gif");
+	pointer-events: none;
+	position: absolute;
+	opacity: 60%;
+	height: calc(var(--block-size) * 3);
+	width: calc(var(--block-size) * 2);
+	transform: rotateY(90deg)
+		translate3d(calc(var(--block-size) * 1), calc(var(--block-size) * -2.5), calc(var(--block-size) * 4.5))
+		translateY(608px) translateZ(-1151px) translateX(-16px);
+	pointer-events: none;
+}
+
+.accent {
+	animation: accent 1s 23s forwards linear;
+  }
+  
+  @keyframes accent {
+	25% {
+	  pointer-events: all;
+	  filter: brightness(1.5);
+	}
+  
+	50% {
+	  pointer-events: all;
+	  filter: brightness(1);
+	}
+  
+	75% {
+	  pointer-events: all;
+	  filter: brightness(1.5);
+	}
+  
+	100% {
+	  pointer-events: all;
+	  filter: brightness(1);
+	}
+  }
+
+  .reload {
+	background-image: url('../assets/reload_button.png');
+	position: fixed;
+	width: 80px;
+	height: 72px;
+	z-index: 9999;
+  
+	right: 16px;
+	top: -80px;
+	animation: reload-show 1s 24s forwards;
+  }
+  
+  @keyframes reload-show {
+	100% {
+	  top: 16px;
+	}
+  }
